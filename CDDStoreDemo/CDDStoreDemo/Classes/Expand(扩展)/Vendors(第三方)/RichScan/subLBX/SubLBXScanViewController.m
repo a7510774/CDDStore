@@ -47,7 +47,7 @@
     if (_isQQSimulator) {
         
          [self drawBottomItems];
-        [self drawTitle];
+         [self drawTitle];
          [self.view bringSubviewToFront:_topTitle];
     }
     else

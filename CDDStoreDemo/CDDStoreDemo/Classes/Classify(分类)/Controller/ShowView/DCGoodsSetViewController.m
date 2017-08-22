@@ -11,7 +11,6 @@
 // Controllers
 #import "DCFootprintGoodsViewController.h"
 #import "DCGoodDetailViewController.h"
-#import "DCFiltrateViewController.h"
 // Models
 #import "DCRecommendItem.h"
 // Views
@@ -20,7 +19,7 @@
 #import "DCSwitchGridCell.h"
 #import "DCListGridCell.h"
 #import "DCColonInsView.h"
-
+#import "DCSildeBarView.h"
 #import "DCHoverFlowLayout.h"
 // Vendors
 #import <MJExtension.h>
@@ -332,7 +331,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
 #pragma mark - 商品筛选
 - (void)filtrateButtonClick
 {
-    [self setUpAlterViewControllerWith:[DCFiltrateViewController alloc] WithDistance:ScreenW * 0.7];
+    [DCSildeBarView dc_showSildBarViewController];
 }
 
 

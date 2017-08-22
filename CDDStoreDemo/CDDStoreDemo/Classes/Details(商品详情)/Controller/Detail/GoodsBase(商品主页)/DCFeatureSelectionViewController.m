@@ -315,4 +315,5 @@ static NSString *const DCFeatureChoseTopCellID = @"DCFeatureChoseTopCell";
 {
     [self.view endEditing:YES];
 }
+
 @end

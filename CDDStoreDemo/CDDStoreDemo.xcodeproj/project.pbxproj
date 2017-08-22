@@ -7,37 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181AED811F4BC646003DB950 /* DCFeatureSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED6B1F4BC646003DB950 /* DCFeatureSelectionViewController.m */; };
+		181AED821F4BC646003DB950 /* DCFillinOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED6D1F4BC646003DB950 /* DCFillinOrderViewController.m */; };
+		181AED831F4BC646003DB950 /* DCGoodBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED6F1F4BC646003DB950 /* DCGoodBaseViewController.m */; };
+		181AED841F4BC646003DB950 /* DCShareToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED711F4BC646003DB950 /* DCShareToViewController.m */; };
+		181AED851F4BC646003DB950 /* DCToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED731F4BC646003DB950 /* DCToolsViewController.m */; };
+		181AED861F4BC646003DB950 /* DCGoodCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED761F4BC646003DB950 /* DCGoodCommentViewController.m */; };
+		181AED8A1F4BC646003DB950 /* DCGoodParticularsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED801F4BC646003DB950 /* DCGoodParticularsViewController.m */; };
+		181AED8C1F4BC6CE003DB950 /* FiltrateItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 181AED8B1F4BC6CE003DB950 /* FiltrateItem.plist */; };
+		181AED921F4BC852003DB950 /* DCFiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED911F4BC852003DB950 /* DCFiltrateViewController.m */; };
+		181AED971F4BC94D003DB950 /* DCFiltrateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED941F4BC94D003DB950 /* DCFiltrateItem.m */; };
+		181AED981F4BC94D003DB950 /* DCContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AED961F4BC94D003DB950 /* DCContentItem.m */; };
+		181AEDAF1F4BC9A8003DB950 /* DCAttributeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDA61F4BC9A8003DB950 /* DCAttributeItemCell.m */; };
+		181AEDB01F4BC9A8003DB950 /* DCFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDA81F4BC9A8003DB950 /* DCFooterReusableView.m */; };
+		181AEDB11F4BC9A8003DB950 /* DCHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDAA1F4BC9A8003DB950 /* DCHeaderReusableView.m */; };
+		181AEDB21F4BC9A8003DB950 /* DCHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */; };
+		181AEDE81F4BF802003DB950 /* DCSildeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDE71F4BF802003DB950 /* DCSildeBarView.m */; };
 		187E678B1E7D793100722607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E678A1E7D793100722607 /* main.m */; };
 		187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E67971E7D793100722607 /* LaunchScreen.storyboard */; };
 		18B859AB1F21A08A008852A7 /* GQGesVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B859AA1F21A08A008852A7 /* GQGesVCTransition.m */; };
 		18DCA3091F1F4187008BF67E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA13E1F1F4186008BF67E /* AppDelegate.m */; };
 		18DCA30A1F1F4187008BF67E /* DCCommodityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1431F1F4186008BF67E /* DCCommodityViewController.m */; };
-		18DCA30B1F1F4187008BF67E /* DCFiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1461F1F4186008BF67E /* DCFiltrateViewController.m */; };
 		18DCA30C1F1F4187008BF67E /* DCFootprintGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1481F1F4186008BF67E /* DCFootprintGoodsViewController.m */; };
 		18DCA30D1F1F4187008BF67E /* DCGoodsSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA14A1F1F4186008BF67E /* DCGoodsSetViewController.m */; };
 		18DCA30E1F1F4187008BF67E /* DCCalssSubItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA14E1F1F4186008BF67E /* DCCalssSubItem.m */; };
 		18DCA30F1F1F4187008BF67E /* DCClassGoodsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1501F1F4186008BF67E /* DCClassGoodsItem.m */; };
 		18DCA3101F1F4187008BF67E /* DCClassMianItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1521F1F4186008BF67E /* DCClassMianItem.m */; };
-		18DCA3111F1F4187008BF67E /* DCFiltrateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1551F1F4186008BF67E /* DCFiltrateItem.m */; };
 		18DCA3121F1F4187008BF67E /* DCBrandSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA15B1F1F4186008BF67E /* DCBrandSortCell.m */; };
 		18DCA3131F1F4187008BF67E /* DCGoodsSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA15D1F1F4186008BF67E /* DCGoodsSortCell.m */; };
 		18DCA3141F1F4187008BF67E /* DCListGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA15F1F1F4186008BF67E /* DCListGridCell.m */; };
 		18DCA3151F1F4187008BF67E /* DCSwitchGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1611F1F4186008BF67E /* DCSwitchGridCell.m */; };
-		18DCA3161F1F4187008BF67E /* DCFiltrateAttrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1641F1F4186008BF67E /* DCFiltrateAttrCell.m */; };
 		18DCA3171F1F4187008BF67E /* DCBrandsSortHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1671F1F4186008BF67E /* DCBrandsSortHeadView.m */; };
-		18DCA3181F1F4187008BF67E /* DCFiltrateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1691F1F4186008BF67E /* DCFiltrateHeaderView.m */; };
 		18DCA3191F1F4187008BF67E /* DCColonInsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA16C1F1F4186008BF67E /* DCColonInsView.m */; };
 		18DCA31A1F1F4187008BF67E /* DCCustionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA16E1F1F4186008BF67E /* DCCustionHeadView.m */; };
 		18DCA31B1F1F4187008BF67E /* DCHoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1701F1F4186008BF67E /* DCHoverFlowLayout.m */; };
 		18DCA31C1F1F4187008BF67E /* DCClassCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1731F1F4186008BF67E /* DCClassCategoryCell.m */; };
 		18DCA31D1F1F4187008BF67E /* DCFootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1751F1F4186008BF67E /* DCFootprintCell.m */; };
-		18DCA31E1F1F4187008BF67E /* DCFeatureSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA17B1F1F4186008BF67E /* DCFeatureSelectionViewController.m */; };
-		18DCA31F1F1F4187008BF67E /* DCFillinOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA17D1F1F4186008BF67E /* DCFillinOrderViewController.m */; };
-		18DCA3201F1F4187008BF67E /* DCGoodBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA17F1F1F4186008BF67E /* DCGoodBaseViewController.m */; };
-		18DCA3211F1F4187008BF67E /* DCShareToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1811F1F4186008BF67E /* DCShareToViewController.m */; };
-		18DCA3221F1F4187008BF67E /* DCToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1831F1F4186008BF67E /* DCToolsViewController.m */; };
-		18DCA3231F1F4187008BF67E /* DCGoodCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1861F1F4186008BF67E /* DCGoodCommentViewController.m */; };
-		18DCA3241F1F4187008BF67E /* DCGoodParticularsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1891F1F4186008BF67E /* DCGoodParticularsViewController.m */; };
 		18DCA3251F1F4187008BF67E /* DCGoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA18C1F1F4186008BF67E /* DCGoodDetailViewController.m */; };
 		18DCA3261F1F4187008BF67E /* DCShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1901F1F4186008BF67E /* DCShareItem.m */; };
 		18DCA3271F1F4187008BF67E /* DCCommentPicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1931F1F4186008BF67E /* DCCommentPicItem.m */; };
@@ -185,7 +190,6 @@
 		18DCA3B51F1F4187008BF67E /* ClassiftyGoods03.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DCA2E71F1F4187008BF67E /* ClassiftyGoods03.plist */; };
 		18DCA3B61F1F4187008BF67E /* ClassifyTitles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DCA2E81F1F4187008BF67E /* ClassifyTitles.plist */; };
 		18DCA3B71F1F4187008BF67E /* DetailRecommend.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DCA2E91F1F4187008BF67E /* DetailRecommend.plist */; };
-		18DCA3B81F1F4187008BF67E /* FiltrateItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DCA2EA1F1F4187008BF67E /* FiltrateItem.plist */; };
 		18DCA3B91F1F4187008BF67E /* FootprintGoods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DCA2EB1F1F4187008BF67E /* FootprintGoods.plist */; };
 		18DCA3BA1F1F4187008BF67E /* shareTerrace.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DCA2EC1F1F4187008BF67E /* shareTerrace.plist */; };
 		18DCA3BB1F1F4187008BF67E /* ShopItem.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DCA2ED1F1F4187008BF67E /* ShopItem.plist */; };
@@ -227,6 +231,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181AED6A1F4BC646003DB950 /* DCFeatureSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFeatureSelectionViewController.h; sourceTree = "<group>"; };
+		181AED6B1F4BC646003DB950 /* DCFeatureSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFeatureSelectionViewController.m; sourceTree = "<group>"; };
+		181AED6C1F4BC646003DB950 /* DCFillinOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFillinOrderViewController.h; sourceTree = "<group>"; };
+		181AED6D1F4BC646003DB950 /* DCFillinOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFillinOrderViewController.m; sourceTree = "<group>"; };
+		181AED6E1F4BC646003DB950 /* DCGoodBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodBaseViewController.h; sourceTree = "<group>"; };
+		181AED6F1F4BC646003DB950 /* DCGoodBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCGoodBaseViewController.m; sourceTree = "<group>"; };
+		181AED701F4BC646003DB950 /* DCShareToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShareToViewController.h; sourceTree = "<group>"; };
+		181AED711F4BC646003DB950 /* DCShareToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCShareToViewController.m; sourceTree = "<group>"; };
+		181AED721F4BC646003DB950 /* DCToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCToolsViewController.h; sourceTree = "<group>"; };
+		181AED731F4BC646003DB950 /* DCToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCToolsViewController.m; sourceTree = "<group>"; };
+		181AED751F4BC646003DB950 /* DCGoodCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodCommentViewController.h; sourceTree = "<group>"; };
+		181AED761F4BC646003DB950 /* DCGoodCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCGoodCommentViewController.m; sourceTree = "<group>"; };
+		181AED7F1F4BC646003DB950 /* DCGoodParticularsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodParticularsViewController.h; sourceTree = "<group>"; };
+		181AED801F4BC646003DB950 /* DCGoodParticularsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCGoodParticularsViewController.m; sourceTree = "<group>"; };
+		181AED8B1F4BC6CE003DB950 /* FiltrateItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FiltrateItem.plist; sourceTree = "<group>"; };
+		181AED901F4BC852003DB950 /* DCFiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateViewController.h; sourceTree = "<group>"; };
+		181AED911F4BC852003DB950 /* DCFiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateViewController.m; sourceTree = "<group>"; };
+		181AED931F4BC94D003DB950 /* DCFiltrateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateItem.h; sourceTree = "<group>"; };
+		181AED941F4BC94D003DB950 /* DCFiltrateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateItem.m; sourceTree = "<group>"; };
+		181AED951F4BC94D003DB950 /* DCContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCContentItem.h; sourceTree = "<group>"; };
+		181AED961F4BC94D003DB950 /* DCContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCContentItem.m; sourceTree = "<group>"; };
+		181AEDA51F4BC9A8003DB950 /* DCAttributeItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAttributeItemCell.h; sourceTree = "<group>"; };
+		181AEDA61F4BC9A8003DB950 /* DCAttributeItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAttributeItemCell.m; sourceTree = "<group>"; };
+		181AEDA71F4BC9A8003DB950 /* DCFooterReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFooterReusableView.h; sourceTree = "<group>"; };
+		181AEDA81F4BC9A8003DB950 /* DCFooterReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFooterReusableView.m; sourceTree = "<group>"; };
+		181AEDA91F4BC9A8003DB950 /* DCHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHeaderReusableView.h; sourceTree = "<group>"; };
+		181AEDAA1F4BC9A8003DB950 /* DCHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHeaderReusableView.m; sourceTree = "<group>"; };
+		181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCHeaderReusableView.xib; sourceTree = "<group>"; };
+		181AEDE61F4BF802003DB950 /* DCSildeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSildeBarView.h; sourceTree = "<group>"; };
+		181AEDE71F4BF802003DB950 /* DCSildeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSildeBarView.m; sourceTree = "<group>"; };
 		187E67861E7D793000722607 /* CDDStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E678A1E7D793100722607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		187E67981E7D793100722607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -239,8 +273,6 @@
 		18DCA13E1F1F4186008BF67E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18DCA1421F1F4186008BF67E /* DCCommodityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCommodityViewController.h; sourceTree = "<group>"; };
 		18DCA1431F1F4186008BF67E /* DCCommodityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCommodityViewController.m; sourceTree = "<group>"; };
-		18DCA1451F1F4186008BF67E /* DCFiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateViewController.h; sourceTree = "<group>"; };
-		18DCA1461F1F4186008BF67E /* DCFiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateViewController.m; sourceTree = "<group>"; };
 		18DCA1471F1F4186008BF67E /* DCFootprintGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFootprintGoodsViewController.h; sourceTree = "<group>"; };
 		18DCA1481F1F4186008BF67E /* DCFootprintGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFootprintGoodsViewController.m; sourceTree = "<group>"; };
 		18DCA1491F1F4186008BF67E /* DCGoodsSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodsSetViewController.h; sourceTree = "<group>"; };
@@ -251,8 +283,6 @@
 		18DCA1501F1F4186008BF67E /* DCClassGoodsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClassGoodsItem.m; sourceTree = "<group>"; };
 		18DCA1511F1F4186008BF67E /* DCClassMianItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClassMianItem.h; sourceTree = "<group>"; };
 		18DCA1521F1F4186008BF67E /* DCClassMianItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClassMianItem.m; sourceTree = "<group>"; };
-		18DCA1541F1F4186008BF67E /* DCFiltrateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateItem.h; sourceTree = "<group>"; };
-		18DCA1551F1F4186008BF67E /* DCFiltrateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateItem.m; sourceTree = "<group>"; };
 		18DCA15A1F1F4186008BF67E /* DCBrandSortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBrandSortCell.h; sourceTree = "<group>"; };
 		18DCA15B1F1F4186008BF67E /* DCBrandSortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBrandSortCell.m; sourceTree = "<group>"; };
 		18DCA15C1F1F4186008BF67E /* DCGoodsSortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodsSortCell.h; sourceTree = "<group>"; };
@@ -261,12 +291,8 @@
 		18DCA15F1F1F4186008BF67E /* DCListGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCListGridCell.m; sourceTree = "<group>"; };
 		18DCA1601F1F4186008BF67E /* DCSwitchGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSwitchGridCell.h; sourceTree = "<group>"; };
 		18DCA1611F1F4186008BF67E /* DCSwitchGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSwitchGridCell.m; sourceTree = "<group>"; };
-		18DCA1631F1F4186008BF67E /* DCFiltrateAttrCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateAttrCell.h; sourceTree = "<group>"; };
-		18DCA1641F1F4186008BF67E /* DCFiltrateAttrCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateAttrCell.m; sourceTree = "<group>"; };
 		18DCA1661F1F4186008BF67E /* DCBrandsSortHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBrandsSortHeadView.h; sourceTree = "<group>"; };
 		18DCA1671F1F4186008BF67E /* DCBrandsSortHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBrandsSortHeadView.m; sourceTree = "<group>"; };
-		18DCA1681F1F4186008BF67E /* DCFiltrateHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFiltrateHeaderView.h; sourceTree = "<group>"; };
-		18DCA1691F1F4186008BF67E /* DCFiltrateHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFiltrateHeaderView.m; sourceTree = "<group>"; };
 		18DCA16B1F1F4186008BF67E /* DCColonInsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCColonInsView.h; sourceTree = "<group>"; };
 		18DCA16C1F1F4186008BF67E /* DCColonInsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCColonInsView.m; sourceTree = "<group>"; };
 		18DCA16D1F1F4186008BF67E /* DCCustionHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCustionHeadView.h; sourceTree = "<group>"; };
@@ -277,20 +303,6 @@
 		18DCA1731F1F4186008BF67E /* DCClassCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClassCategoryCell.m; sourceTree = "<group>"; };
 		18DCA1741F1F4186008BF67E /* DCFootprintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFootprintCell.h; sourceTree = "<group>"; };
 		18DCA1751F1F4186008BF67E /* DCFootprintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFootprintCell.m; sourceTree = "<group>"; };
-		18DCA17A1F1F4186008BF67E /* DCFeatureSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFeatureSelectionViewController.h; sourceTree = "<group>"; };
-		18DCA17B1F1F4186008BF67E /* DCFeatureSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFeatureSelectionViewController.m; sourceTree = "<group>"; };
-		18DCA17C1F1F4186008BF67E /* DCFillinOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFillinOrderViewController.h; sourceTree = "<group>"; };
-		18DCA17D1F1F4186008BF67E /* DCFillinOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFillinOrderViewController.m; sourceTree = "<group>"; };
-		18DCA17E1F1F4186008BF67E /* DCGoodBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodBaseViewController.h; sourceTree = "<group>"; };
-		18DCA17F1F1F4186008BF67E /* DCGoodBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCGoodBaseViewController.m; sourceTree = "<group>"; };
-		18DCA1801F1F4186008BF67E /* DCShareToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShareToViewController.h; sourceTree = "<group>"; };
-		18DCA1811F1F4186008BF67E /* DCShareToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCShareToViewController.m; sourceTree = "<group>"; };
-		18DCA1821F1F4186008BF67E /* DCToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCToolsViewController.h; sourceTree = "<group>"; };
-		18DCA1831F1F4186008BF67E /* DCToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCToolsViewController.m; sourceTree = "<group>"; };
-		18DCA1851F1F4186008BF67E /* DCGoodCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodCommentViewController.h; sourceTree = "<group>"; };
-		18DCA1861F1F4186008BF67E /* DCGoodCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCGoodCommentViewController.m; sourceTree = "<group>"; };
-		18DCA1881F1F4186008BF67E /* DCGoodParticularsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodParticularsViewController.h; sourceTree = "<group>"; };
-		18DCA1891F1F4186008BF67E /* DCGoodParticularsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCGoodParticularsViewController.m; sourceTree = "<group>"; };
 		18DCA18B1F1F4186008BF67E /* DCGoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCGoodDetailViewController.h; sourceTree = "<group>"; };
 		18DCA18C1F1F4186008BF67E /* DCGoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCGoodDetailViewController.m; sourceTree = "<group>"; };
 		18DCA18F1F1F4186008BF67E /* DCShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCShareItem.h; sourceTree = "<group>"; };
@@ -575,7 +587,6 @@
 		18DCA2E71F1F4187008BF67E /* ClassiftyGoods03.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClassiftyGoods03.plist; sourceTree = "<group>"; };
 		18DCA2E81F1F4187008BF67E /* ClassifyTitles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClassifyTitles.plist; sourceTree = "<group>"; };
 		18DCA2E91F1F4187008BF67E /* DetailRecommend.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DetailRecommend.plist; sourceTree = "<group>"; };
-		18DCA2EA1F1F4187008BF67E /* FiltrateItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FiltrateItem.plist; sourceTree = "<group>"; };
 		18DCA2EB1F1F4187008BF67E /* FootprintGoods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FootprintGoods.plist; sourceTree = "<group>"; };
 		18DCA2EC1F1F4187008BF67E /* shareTerrace.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shareTerrace.plist; sourceTree = "<group>"; };
 		18DCA2ED1F1F4187008BF67E /* ShopItem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShopItem.plist; sourceTree = "<group>"; };
@@ -633,6 +644,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181AED691F4BC646003DB950 /* GoodsBase(商品主页) */ = {
+			isa = PBXGroup;
+			children = (
+				181AED6A1F4BC646003DB950 /* DCFeatureSelectionViewController.h */,
+				181AED6B1F4BC646003DB950 /* DCFeatureSelectionViewController.m */,
+				181AED6C1F4BC646003DB950 /* DCFillinOrderViewController.h */,
+				181AED6D1F4BC646003DB950 /* DCFillinOrderViewController.m */,
+				181AED6E1F4BC646003DB950 /* DCGoodBaseViewController.h */,
+				181AED6F1F4BC646003DB950 /* DCGoodBaseViewController.m */,
+				181AED701F4BC646003DB950 /* DCShareToViewController.h */,
+				181AED711F4BC646003DB950 /* DCShareToViewController.m */,
+				181AED721F4BC646003DB950 /* DCToolsViewController.h */,
+				181AED731F4BC646003DB950 /* DCToolsViewController.m */,
+			);
+			path = "GoodsBase(商品主页)";
+			sourceTree = "<group>";
+		};
+		181AED741F4BC646003DB950 /* GoodsComments(商品评论) */ = {
+			isa = PBXGroup;
+			children = (
+				181AED751F4BC646003DB950 /* DCGoodCommentViewController.h */,
+				181AED761F4BC646003DB950 /* DCGoodCommentViewController.m */,
+			);
+			path = "GoodsComments(商品评论)";
+			sourceTree = "<group>";
+		};
+		181AED771F4BC646003DB950 /* GoodsFiltrate(商品筛选) */ = {
+			isa = PBXGroup;
+			children = (
+				181AED781F4BC646003DB950 /* Controller */,
+				181AED7A1F4BC646003DB950 /* Model */,
+				181AED7C1F4BC646003DB950 /* View */,
+			);
+			path = "GoodsFiltrate(商品筛选)";
+			sourceTree = "<group>";
+		};
+		181AED781F4BC646003DB950 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				181AED901F4BC852003DB950 /* DCFiltrateViewController.h */,
+				181AED911F4BC852003DB950 /* DCFiltrateViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		181AED7A1F4BC646003DB950 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				181AED931F4BC94D003DB950 /* DCFiltrateItem.h */,
+				181AED941F4BC94D003DB950 /* DCFiltrateItem.m */,
+				181AED951F4BC94D003DB950 /* DCContentItem.h */,
+				181AED961F4BC94D003DB950 /* DCContentItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		181AED7C1F4BC646003DB950 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				181AEDA41F4BC9A8003DB950 /* Cell */,
+				181AEDAC1F4BC9A8003DB950 /* CustomView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		181AED7E1F4BC646003DB950 /* GoodsParticulars(商品详情) */ = {
+			isa = PBXGroup;
+			children = (
+				181AED7F1F4BC646003DB950 /* DCGoodParticularsViewController.h */,
+				181AED801F4BC646003DB950 /* DCGoodParticularsViewController.m */,
+			);
+			path = "GoodsParticulars(商品详情)";
+			sourceTree = "<group>";
+		};
+		181AEDA41F4BC9A8003DB950 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				181AEDA51F4BC9A8003DB950 /* DCAttributeItemCell.h */,
+				181AEDA61F4BC9A8003DB950 /* DCAttributeItemCell.m */,
+				181AEDA71F4BC9A8003DB950 /* DCFooterReusableView.h */,
+				181AEDA81F4BC9A8003DB950 /* DCFooterReusableView.m */,
+				181AEDA91F4BC9A8003DB950 /* DCHeaderReusableView.h */,
+				181AEDAA1F4BC9A8003DB950 /* DCHeaderReusableView.m */,
+				181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		181AEDAC1F4BC9A8003DB950 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				181AEDE61F4BF802003DB950 /* DCSildeBarView.h */,
+				181AEDE71F4BF802003DB950 /* DCSildeBarView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		187E677D1E7D793000722607 = {
 			isa = PBXGroup;
 			children = (
@@ -740,8 +848,6 @@
 		18DCA1441F1F4186008BF67E /* ShowView */ = {
 			isa = PBXGroup;
 			children = (
-				18DCA1451F1F4186008BF67E /* DCFiltrateViewController.h */,
-				18DCA1461F1F4186008BF67E /* DCFiltrateViewController.m */,
 				18DCA1471F1F4186008BF67E /* DCFootprintGoodsViewController.h */,
 				18DCA1481F1F4186008BF67E /* DCFootprintGoodsViewController.m */,
 				18DCA1491F1F4186008BF67E /* DCGoodsSetViewController.h */,
@@ -754,7 +860,6 @@
 			isa = PBXGroup;
 			children = (
 				18DCA14C1F1F4186008BF67E /* Main */,
-				18DCA1531F1F4186008BF67E /* 筛选 */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -770,15 +875,6 @@
 				18DCA1521F1F4186008BF67E /* DCClassMianItem.m */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		18DCA1531F1F4186008BF67E /* 筛选 */ = {
-			isa = PBXGroup;
-			children = (
-				18DCA1541F1F4186008BF67E /* DCFiltrateItem.h */,
-				18DCA1551F1F4186008BF67E /* DCFiltrateItem.m */,
-			);
-			path = "筛选";
 			sourceTree = "<group>";
 		};
 		18DCA1561F1F4186008BF67E /* View */ = {
@@ -804,7 +900,6 @@
 			isa = PBXGroup;
 			children = (
 				18DCA1591F1F4186008BF67E /* Main */,
-				18DCA1621F1F4186008BF67E /* 商品筛选 */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -824,22 +919,11 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		18DCA1621F1F4186008BF67E /* 商品筛选 */ = {
-			isa = PBXGroup;
-			children = (
-				18DCA1631F1F4186008BF67E /* DCFiltrateAttrCell.h */,
-				18DCA1641F1F4186008BF67E /* DCFiltrateAttrCell.m */,
-			);
-			path = "商品筛选";
-			sourceTree = "<group>";
-		};
 		18DCA1651F1F4186008BF67E /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				18DCA1661F1F4186008BF67E /* DCBrandsSortHeadView.h */,
 				18DCA1671F1F4186008BF67E /* DCBrandsSortHeadView.m */,
-				18DCA1681F1F4186008BF67E /* DCFiltrateHeaderView.h */,
-				18DCA1691F1F4186008BF67E /* DCFiltrateHeaderView.m */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -890,46 +974,12 @@
 		18DCA1781F1F4186008BF67E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				18DCA1791F1F4186008BF67E /* GoodsBase */,
-				18DCA1841F1F4186008BF67E /* GoodsComments */,
-				18DCA1871F1F4186008BF67E /* GoodsParticulars */,
+				181AED691F4BC646003DB950 /* GoodsBase(商品主页) */,
+				181AED741F4BC646003DB950 /* GoodsComments(商品评论) */,
+				181AED771F4BC646003DB950 /* GoodsFiltrate(商品筛选) */,
+				181AED7E1F4BC646003DB950 /* GoodsParticulars(商品详情) */,
 			);
 			path = Detail;
-			sourceTree = "<group>";
-		};
-		18DCA1791F1F4186008BF67E /* GoodsBase */ = {
-			isa = PBXGroup;
-			children = (
-				18DCA17E1F1F4186008BF67E /* DCGoodBaseViewController.h */,
-				18DCA17F1F1F4186008BF67E /* DCGoodBaseViewController.m */,
-				18DCA17A1F1F4186008BF67E /* DCFeatureSelectionViewController.h */,
-				18DCA17B1F1F4186008BF67E /* DCFeatureSelectionViewController.m */,
-				18DCA17C1F1F4186008BF67E /* DCFillinOrderViewController.h */,
-				18DCA17D1F1F4186008BF67E /* DCFillinOrderViewController.m */,
-				18DCA1801F1F4186008BF67E /* DCShareToViewController.h */,
-				18DCA1811F1F4186008BF67E /* DCShareToViewController.m */,
-				18DCA1821F1F4186008BF67E /* DCToolsViewController.h */,
-				18DCA1831F1F4186008BF67E /* DCToolsViewController.m */,
-			);
-			path = GoodsBase;
-			sourceTree = "<group>";
-		};
-		18DCA1841F1F4186008BF67E /* GoodsComments */ = {
-			isa = PBXGroup;
-			children = (
-				18DCA1851F1F4186008BF67E /* DCGoodCommentViewController.h */,
-				18DCA1861F1F4186008BF67E /* DCGoodCommentViewController.m */,
-			);
-			path = GoodsComments;
-			sourceTree = "<group>";
-		};
-		18DCA1871F1F4186008BF67E /* GoodsParticulars */ = {
-			isa = PBXGroup;
-			children = (
-				18DCA1881F1F4186008BF67E /* DCGoodParticularsViewController.h */,
-				18DCA1891F1F4186008BF67E /* DCGoodParticularsViewController.m */,
-			);
-			path = GoodsParticulars;
 			sourceTree = "<group>";
 		};
 		18DCA18A1F1F4186008BF67E /* Main */ = {
@@ -1746,13 +1796,13 @@
 		18DCA2E31F1F4187008BF67E /* 分类Plist */ = {
 			isa = PBXGroup;
 			children = (
+				181AED8B1F4BC6CE003DB950 /* FiltrateItem.plist */,
 				18DCA2E41F1F4187008BF67E /* ClasiftyGoods.plist */,
 				18DCA2E51F1F4187008BF67E /* ClassiftyGoods01.plist */,
 				18DCA2E61F1F4187008BF67E /* ClassiftyGoods02.plist */,
 				18DCA2E71F1F4187008BF67E /* ClassiftyGoods03.plist */,
 				18DCA2E81F1F4187008BF67E /* ClassifyTitles.plist */,
 				18DCA2E91F1F4187008BF67E /* DetailRecommend.plist */,
-				18DCA2EA1F1F4187008BF67E /* FiltrateItem.plist */,
 				18DCA2EB1F1F4187008BF67E /* FootprintGoods.plist */,
 				18DCA2EC1F1F4187008BF67E /* shareTerrace.plist */,
 				18DCA2ED1F1F4187008BF67E /* ShopItem.plist */,
@@ -1965,6 +2015,7 @@
 				18DCA3B41F1F4187008BF67E /* ClassiftyGoods02.plist in Resources */,
 				18DCA3BC1F1F4187008BF67E /* CommentPic.plist in Resources */,
 				18DCA3571F1F4187008BF67E /* CodeScan.bundle in Resources */,
+				181AEDB21F4BC9A8003DB950 /* DCHeaderReusableView.xib in Resources */,
 				18DCA3711F1F4187008BF67E /* restrictedshine.tiff in Resources */,
 				18DCA36F1F1F4187008BF67E /* line.png in Resources */,
 				18DCA3B31F1F4187008BF67E /* ClassiftyGoods01.plist in Resources */,
@@ -1974,6 +2025,7 @@
 				18DCA3C21F1F4187008BF67E /* RecommendShop.plist in Resources */,
 				18DCA3B91F1F4187008BF67E /* FootprintGoods.plist in Resources */,
 				18DCA3BD1F1F4187008BF67E /* DeliveryAdress.plist in Resources */,
+				181AED8C1F4BC6CE003DB950 /* FiltrateItem.plist in Resources */,
 				18DCA3BE1F1F4187008BF67E /* MessageNote.plist in Resources */,
 				187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */,
 				18DCA3C11F1F4187008BF67E /* YouLikeGoods.plist in Resources */,
@@ -1991,7 +2043,6 @@
 				18DCA3B51F1F4187008BF67E /* ClassiftyGoods03.plist in Resources */,
 				18DCA3BB1F1F4187008BF67E /* ShopItem.plist in Resources */,
 				18DCA3B61F1F4187008BF67E /* ClassifyTitles.plist in Resources */,
-				18DCA3B81F1F4187008BF67E /* FiltrateItem.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2078,7 +2129,7 @@
 				18DCA3621F1F4187008BF67E /* ZXingWrapper.m in Sources */,
 				18DCA30C1F1F4187008BF67E /* DCFootprintGoodsViewController.m in Sources */,
 				18DCA3C71F1F4187008BF67E /* DCRecommendItem.m in Sources */,
-				18DCA3161F1F4187008BF67E /* DCFiltrateAttrCell.m in Sources */,
+				181AED811F4BC646003DB950 /* DCFeatureSelectionViewController.m in Sources */,
 				18DCA33E1F1F4187008BF67E /* DCPartCommentHeadView.m in Sources */,
 				18DCA3091F1F4187008BF67E /* AppDelegate.m in Sources */,
 				18DCA3851F1F4187008BF67E /* XWFilterAnimator+XWPageCurl.m in Sources */,
@@ -2114,9 +2165,11 @@
 				18DCA3641F1F4187008BF67E /* MyQRViewController.m in Sources */,
 				18DCA3381F1F4187008BF67E /* DCCommentCell.m in Sources */,
 				18DCA3141F1F4187008BF67E /* DCListGridCell.m in Sources */,
+				181AEDB01F4BC9A8003DB950 /* DCFooterReusableView.m in Sources */,
 				18DCA31A1F1F4187008BF67E /* DCCustionHeadView.m in Sources */,
 				18DCA3891F1F4187008BF67E /* XWFilterTransitionView.m in Sources */,
 				18DCA38A1F1F4187008BF67E /* XWMagicMoveAnimator.m in Sources */,
+				181AED8A1F4BC646003DB950 /* DCGoodParticularsViewController.m in Sources */,
 				18DCA3981F1F4187008BF67E /* DCYouLikeHeadView.m in Sources */,
 				18DCA3481F1F4187008BF67E /* DCCustionButton.m in Sources */,
 				18DCA3131F1F4187008BF67E /* DCGoodsSortCell.m in Sources */,
@@ -2124,11 +2177,9 @@
 				18DCA31C1F1F4187008BF67E /* DCClassCategoryCell.m in Sources */,
 				18DCA3A51F1F4187008BF67E /* DCPersonalCenterViewController.m in Sources */,
 				18DCA34C1F1F4187008BF67E /* DCSelPhotos.m in Sources */,
-				18DCA31F1F1F4187008BF67E /* DCFillinOrderViewController.m in Sources */,
 				18DCA3721F1F4187008BF67E /* SDBrowserImageView.m in Sources */,
 				18DCA3761F1F4187008BF67E /* XWCoolAnimator+XWExplode.m in Sources */,
 				18DCA3901F1F4187008BF67E /* DCGoodsHandheldCell.m in Sources */,
-				18DCA3221F1F4187008BF67E /* DCToolsViewController.m in Sources */,
 				18DCA3451F1F4187008BF67E /* UIImageView+DCExtension.m in Sources */,
 				18DCA34A1F1F4187008BF67E /* DCUpDownButton.m in Sources */,
 				18DCA31B1F1F4187008BF67E /* DCHoverFlowLayout.m in Sources */,
@@ -2137,20 +2188,22 @@
 				18DCA3501F1F4187008BF67E /* AddressPickerView.m in Sources */,
 				18DCA3261F1F4187008BF67E /* DCShareItem.m in Sources */,
 				18DCA3A71F1F4187008BF67E /* DCAddressItem.m in Sources */,
-				18DCA30B1F1F4187008BF67E /* DCFiltrateViewController.m in Sources */,
 				18DCA3171F1F4187008BF67E /* DCBrandsSortHeadView.m in Sources */,
 				18DCA3A01F1F4187008BF67E /* DCChangeNickNameViewController.m in Sources */,
 				18DCA37C1F1F4187008BF67E /* XWCoolAnimator+XWScanning.m in Sources */,
+				181AED921F4BC852003DB950 /* DCFiltrateViewController.m in Sources */,
 				187E678B1E7D793100722607 /* main.m in Sources */,
 				18DCA35B1F1F4187008BF67E /* LBXScanResult.m in Sources */,
-				18DCA3181F1F4187008BF67E /* DCFiltrateHeaderView.m in Sources */,
 				18DCA3191F1F4187008BF67E /* DCColonInsView.m in Sources */,
 				18DCA3A11F1F4187008BF67E /* DCHelpBackViewController.m in Sources */,
 				18DCA3801F1F4187008BF67E /* XWFilterAnimator+XWBoxBlur.m in Sources */,
 				18DCA34D1F1F4187008BF67E /* DCSpeedy.m in Sources */,
+				181AED861F4BC646003DB950 /* DCGoodCommentViewController.m in Sources */,
 				18DCA3271F1F4187008BF67E /* DCCommentPicItem.m in Sources */,
 				18DCA3781F1F4187008BF67E /* XWCoolAnimator+XWLines.m in Sources */,
+				181AED821F4BC646003DB950 /* DCFillinOrderViewController.m in Sources */,
 				18DCA3361F1F4187008BF67E /* DCShowTypeThreeCell.m in Sources */,
+				181AED831F4BC646003DB950 /* DCGoodBaseViewController.m in Sources */,
 				18DCA3521F1F4187008BF67E /* WJYAlertView.m in Sources */,
 				18DCA3601F1F4187008BF67E /* LBXScanWrapper.m in Sources */,
 				18DCA32F1F1F4187008BF67E /* DCDetailLikeCell.m in Sources */,
@@ -2158,12 +2211,10 @@
 				18DCA33D1F1F4187008BF67E /* DCDetailPartCommentCell.m in Sources */,
 				18DCA3CA1F1F4187008BF67E /* DCRecommendReusableView.m in Sources */,
 				18DCA35D1F1F4187008BF67E /* LBXScanView.m in Sources */,
-				18DCA3111F1F4187008BF67E /* DCFiltrateItem.m in Sources */,
 				18DCA3541F1F4187008BF67E /* JKDBModel.m in Sources */,
 				18DCA36A1F1F4187008BF67E /* UINavigationController+XWTransition.m in Sources */,
 				18DCA3951F1F4187008BF67E /* DCTopLineFootView.m in Sources */,
 				18DCA3551F1F4187008BF67E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
-				18DCA3231F1F4187008BF67E /* DCGoodCommentViewController.m in Sources */,
 				18DCA3861F1F4187008BF67E /* XWFilterAnimator+XWRipple.m in Sources */,
 				18DCA3831F1F4187008BF67E /* XWFilterAnimator+XWMask.m in Sources */,
 				18DCA3AC1F1F4187008BF67E /* DCMessageNoteCell.m in Sources */,
@@ -2172,14 +2223,15 @@
 				18DCA3971F1F4187008BF67E /* DCSlideshowHeadView.m in Sources */,
 				18DCA3471F1F4187008BF67E /* DCConsts.m in Sources */,
 				18DCA3A41F1F4187008BF67E /* DCMessageViewController.m in Sources */,
+				181AED981F4BC94D003DB950 /* DCContentItem.m in Sources */,
 				18DCA32D1F1F4187008BF67E /* DCDetailShufflingHeadView.m in Sources */,
 				18DCA3491F1F4187008BF67E /* DCLIRLButton.m in Sources */,
 				18DCA3AF1F1F4187008BF67E /* DCFlowAttributeCell.m in Sources */,
 				18DCA32B1F1F4187008BF67E /* DCDetailOverFooterView.m in Sources */,
-				18DCA31E1F1F4187008BF67E /* DCFeatureSelectionViewController.m in Sources */,
 				18DCA30D1F1F4187008BF67E /* DCGoodsSetViewController.m in Sources */,
 				18DCA3731F1F4187008BF67E /* SDPhotoBrowser.m in Sources */,
 				18DCA36B1F1F4187008BF67E /* UIView+Snapshot.m in Sources */,
+				181AEDAF1F4BC9A8003DB950 /* DCAttributeItemCell.m in Sources */,
 				18DCA33C1F1F4187008BF67E /* DCCommentPicCell.m in Sources */,
 				18DCA3401F1F4187008BF67E /* DCFeatureItemCell.m in Sources */,
 				18DCA3611F1F4187008BF67E /* LBXZXCapture.m in Sources */,
@@ -2187,19 +2239,20 @@
 				18DCA3101F1F4187008BF67E /* DCClassMianItem.m in Sources */,
 				18DCA3371F1F4187008BF67E /* DCShowTypeTwoCell.m in Sources */,
 				18DCA3151F1F4187008BF67E /* DCSwitchGridCell.m in Sources */,
-				18DCA3241F1F4187008BF67E /* DCGoodParticularsViewController.m in Sources */,
 				18DCA3671F1F4187008BF67E /* SubLBXScanViewController.m in Sources */,
 				18DCA35C1F1F4187008BF67E /* LBXScanVideoZoomView.m in Sources */,
 				18DCA37D1F1F4187008BF67E /* XWCoolAnimator.m in Sources */,
 				18DCA37E1F1F4187008BF67E /* XWDrawerAnimator.m in Sources */,
-				18DCA3211F1F4187008BF67E /* DCShareToViewController.m in Sources */,
 				18DCA3AE1F1F4187008BF67E /* DCSettingCell.m in Sources */,
+				181AED851F4BC646003DB950 /* DCToolsViewController.m in Sources */,
 				18DCA39A1F1F4187008BF67E /* DCNavSearchBarView.m in Sources */,
 				18DCA3AD1F1F4187008BF67E /* DCReceiverAddressCell.m in Sources */,
 				18DCA3841F1F4187008BF67E /* XWFilterAnimator+XWMod.m in Sources */,
 				18DCA3291F1F4187008BF67E /* DCFeatureList.m in Sources */,
 				18DCA39D1F1F4187008BF67E /* DCNavigationController.m in Sources */,
 				18DCA35E1F1F4187008BF67E /* LBXScanViewController.m in Sources */,
+				181AED971F4BC94D003DB950 /* DCFiltrateItem.m in Sources */,
+				181AED841F4BC646003DB950 /* DCShareToViewController.m in Sources */,
 				18DCA3961F1F4187008BF67E /* DCCountDownHeadView.m in Sources */,
 				18DCA33A1F1F4187008BF67E /* DCCommentFooterCell.m in Sources */,
 				18DCA3A31F1F4187008BF67E /* DCReceiverAdressViewController.m in Sources */,
@@ -2212,14 +2265,15 @@
 				18B859AB1F21A08A008852A7 /* GQGesVCTransition.m in Sources */,
 				18DCA3A21F1F4187008BF67E /* DCMySelfMessageViewController.m in Sources */,
 				18DCA31D1F1F4187008BF67E /* DCFootprintCell.m in Sources */,
-				18DCA3201F1F4187008BF67E /* DCGoodBaseViewController.m in Sources */,
 				18DCA3561F1F4187008BF67E /* PPNumberButton.m in Sources */,
 				18DCA30E1F1F4187008BF67E /* DCCalssSubItem.m in Sources */,
 				18DCA3AB1F1F4187008BF67E /* DCHelpBackSquareCell.m in Sources */,
 				18DCA32C1F1F4187008BF67E /* DCDeatilCustomHeadView.m in Sources */,
 				18DCA34B1F1F4187008BF67E /* DCKeepNewUserData.m in Sources */,
+				181AEDB11F4BC9A8003DB950 /* DCHeaderReusableView.m in Sources */,
 				18DCA3691F1F4187008BF67E /* UIAlertView+LBXAlertAction.m in Sources */,
 				18DCA3341F1F4187008BF67E /* DCShowTypeFourCell.m in Sources */,
+				181AEDE81F4BF802003DB950 /* DCSildeBarView.m in Sources */,
 				18DCA35A1F1F4187008BF67E /* LBXScanNetAnimation.m in Sources */,
 				18DCA36E1F1F4187008BF67E /* XWTransitionAnimator.m in Sources */,
 				18DCA3821F1F4187008BF67E /* XWFilterAnimator+XWFlash.m in Sources */,

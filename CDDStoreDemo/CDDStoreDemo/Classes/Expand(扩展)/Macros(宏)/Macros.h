@@ -48,6 +48,8 @@
 
 #define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
+#define KEYWINDOW  [UIApplication sharedApplication].keyWindow
+
 #define UserInfoData [DCUserInfo findAll].lastObject
 
 

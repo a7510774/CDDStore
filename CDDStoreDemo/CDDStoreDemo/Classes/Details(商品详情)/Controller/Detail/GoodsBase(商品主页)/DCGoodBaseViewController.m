@@ -393,7 +393,7 @@ static NSArray *lastSeleArray_;
             weakSelf.cell.leftTitleLable.text = @"已选";
         };
         dcFeaVc.lastNum = lastNum_;
-        dcFeaVc.lastSeleArray = lastSeleArray_;
+        dcFeaVc.lastSeleArray = [NSMutableArray arrayWithArray:lastSeleArray_];
         dcFeaVc.goodImageView = _goodImageView;
         [self setUpAlterViewControllerWith:dcFeaVc WithDistance:ScreenH * 0.8 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:YES WithFlipEnable:YES];
     }
