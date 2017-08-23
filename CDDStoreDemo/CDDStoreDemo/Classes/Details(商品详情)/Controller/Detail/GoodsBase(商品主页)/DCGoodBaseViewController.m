@@ -36,6 +36,7 @@
 #import <WebKit/WebKit.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
+#import <SVProgressHUD.h>
 // Categories
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
@@ -48,8 +49,6 @@
 @property (strong, nonatomic) WKWebView *webView;
 /* 选择地址弹框 */
 @property (strong , nonatomic)AddressPickerView *adPickerView;
-/* 已选组Cell */
-@property (weak ,nonatomic)DCShowTypeOneCell *cell;
 /* 滚回顶部按钮 */
 @property (strong , nonatomic)UIButton *backTopButton;
 /* 通知 */
@@ -75,7 +74,7 @@ static NSString *DCDetailPartCommentCellID = @"DCDetailPartCommentCell";
 static NSString *DCDetailOverFooterViewID = @"DCDetailOverFooterView";
 
 
-static NSInteger lastNum_;
+static NSString *lastNum_;
 static NSArray *lastSeleArray_;
 
 @implementation DCGoodBaseViewController
@@ -152,6 +151,7 @@ static NSArray *lastSeleArray_;
     [self setUpGoodsWKWebView];
     
     [self setUpSuspendView];
+
     
     [self acceptanceNote];
 }
@@ -165,7 +165,7 @@ static NSArray *lastSeleArray_;
     self.scrollerView.backgroundColor = self.view.backgroundColor;
 
     //初始化
-    lastSeleArray_ = [NSMutableArray array];
+    lastSeleArray_ = [NSArray array];
     lastNum_ = 0;
 }
 
@@ -178,31 +178,52 @@ static NSArray *lastSeleArray_;
         [weakSelf selfAlterViewback];
         [weakSelf setUpAlterViewControllerWith:[DCShareToViewController new] WithDistance:300 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:NO WithFlipEnable:NO];
     }];
-    //加入购物车或点击直接购买通知
+    
+
+    //父类加入购物车，立即购买通知
     _dcObj = [[NSNotificationCenter defaultCenter]addObserverForName:@"ClikAddOrBuy" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         
-        DCFeatureSelectionViewController *dcFeaVc = [DCFeatureSelectionViewController new];
-        __weak typeof(self)weakSelf = self;
-        dcFeaVc.userChooseBlock = ^(NSMutableArray *seleArray, NSInteger num, NSInteger tag) { //第一次更新选择的属性
-            NSString *result = [NSString stringWithFormat:@"%@ %zd件",[seleArray componentsJoinedByString:@"，"],num];
-            weakSelf.cell.contentLabel.text = result;
-        };
-        
-        if ([weakSelf.cell.leftTitleLable.text isEqual:@"已选"]) {
-            
-            if ([note.userInfo[@"buttonTag"] isEqualToString:@"2"]) { //加入购物车
+        if (lastSeleArray_.count != 0) {
+            if ([note.userInfo[@"buttonTag"] isEqualToString:@"2"]) { //加入购物车（父类）
                 
-            }else if ([note.userInfo[@"buttonTag"] isEqualToString:@"3"]){//立即购买
-
+                [weakSelf setUpWithAddSuccess];
+                
+            }else if ([note.userInfo[@"buttonTag"] isEqualToString:@"3"]){//立即购买（父类）
+                
                 DCFillinOrderViewController *dcFillVc = [DCFillinOrderViewController new];
                 [weakSelf.navigationController pushViewController:dcFillVc animated:YES];
             }
             
-        }else{
-            dcFeaVc.goodImageView = _goodImageView;
-            [self setUpAlterViewControllerWith:dcFeaVc WithDistance:ScreenH * 0.8 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:YES WithFlipEnable:YES];
+        }else {
+            
+            DCFeatureSelectionViewController *dcNewFeaVc = [DCFeatureSelectionViewController new];
+            dcNewFeaVc.goodImageView = _goodImageView;
+            [weakSelf setUpAlterViewControllerWith:dcNewFeaVc WithDistance:ScreenH * 0.8 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:YES WithFlipEnable:YES];
         }
+    }];
 
+    //选择Item通知
+    _dcObj = [[NSNotificationCenter defaultCenter]addObserverForName:@"itemSelectBack" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        
+        NSArray *selectArray = note.userInfo[@"Array"];
+        NSString *num = note.userInfo[@"Num"];
+        NSString *buttonTag = note.userInfo[@"Tag"];
+
+        lastNum_ = num;
+        lastSeleArray_ = selectArray;
+        
+        [weakSelf.collectionView reloadData];
+        
+        if ([buttonTag isEqualToString:@"0"]) { //加入购物车
+            
+            [weakSelf setUpWithAddSuccess];
+            
+        }else if ([buttonTag isEqualToString:@"1"]) { //立即购买
+            
+            DCFillinOrderViewController *dcFillVc = [DCFillinOrderViewController new];
+            [weakSelf.navigationController pushViewController:dcFillVc animated:YES];
+        }
+        
     }];
 }
 
@@ -272,9 +293,12 @@ static NSArray *lastSeleArray_;
     }else if (indexPath.section == 1 || indexPath.section == 2 ){
         if (indexPath.section == 1) {
             DCShowTypeOneCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCShowTypeOneCellID forIndexPath:indexPath];
-            _cell = cell;
-            cell.leftTitleLable.text = @"点击";
-            cell.contentLabel.text = @"请选择该商品属性";
+
+            NSString *result = [NSString stringWithFormat:@"%@ %@件",[lastSeleArray_ componentsJoinedByString:@"，"],lastNum_];
+            
+            cell.leftTitleLable.text = (lastSeleArray_.count == 0) ? @"点击" : @"已选";
+            cell.contentLabel.text = (lastSeleArray_.count == 0) ? @"请选择该商品属性" : result;
+            
             gridcell = cell;
         }else{
             if (indexPath.row == 0) {
@@ -374,24 +398,6 @@ static NSArray *lastSeleArray_;
         [self chageUserAdress]; //跟换地址
     }else if (indexPath.section == 1){ //属性选择
         DCFeatureSelectionViewController *dcFeaVc = [DCFeatureSelectionViewController new];
-        __weak typeof(self)weakSelf = self;
-        
-        dcFeaVc.userChooseBlock = ^(NSMutableArray *seleArray, NSInteger num, NSInteger tag) { //更新选择的属性
-            if (lastSeleArray_ == seleArray && lastNum_ == num)return; //传递过来的数据判断与上一次的相同则返回
-            NSString *result = [NSString stringWithFormat:@"%@ %zd件",[seleArray componentsJoinedByString:@"，"],num];
-            weakSelf.cell.contentLabel.text = result;
-            lastNum_ = num;
-            lastSeleArray_ = seleArray;
-            if (tag == 0) {
-                
-            }else if(tag == 1){
-                DCFillinOrderViewController *dcFillVc = [DCFillinOrderViewController new];
-                [weakSelf.navigationController pushViewController:dcFillVc animated:YES];
-            }
-            
-            if ([weakSelf.cell.leftTitleLable.text isEqualToString:@"已选"])return;
-            weakSelf.cell.leftTitleLable.text = @"已选";
-        };
         dcFeaVc.lastNum = lastNum_;
         dcFeaVc.lastSeleArray = [NSMutableArray arrayWithArray:lastSeleArray_];
         dcFeaVc.goodImageView = _goodImageView;
@@ -478,6 +484,7 @@ static NSArray *lastSeleArray_;
 #pragma mark - 转场动画弹出控制器
 - (void)setUpAlterViewControllerWith:(UIViewController *)vc WithDistance:(CGFloat)distance WithDirection:(XWDrawerAnimatorDirection)vcDirection WithParallaxEnable:(BOOL)parallaxEnable WithFlipEnable:(BOOL)flipEnable
 {
+    [self dismissViewControllerAnimated:YES completion:nil]; //以防有控制未退出
     XWDrawerAnimatorDirection direction = vcDirection;
     XWDrawerAnimator *animator = [XWDrawerAnimator xw_animatorWithDirection:direction moveDistance:distance];
     animator.parallaxEnable = parallaxEnable;
@@ -487,6 +494,14 @@ static NSArray *lastSeleArray_;
     [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
         [weakSelf selfAlterViewback];
     }];
+}
+
+#pragma mark - 加入购物车成功
+- (void)setUpWithAddSuccess
+{
+    [SVProgressHUD showSuccessWithStatus:@"加入购物车成功~"];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD dismissWithDelay:1.0];
 }
 
 #pragma 退出界面

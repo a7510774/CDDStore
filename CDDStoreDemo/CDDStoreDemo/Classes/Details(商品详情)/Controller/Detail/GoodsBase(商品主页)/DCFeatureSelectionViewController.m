@@ -161,7 +161,7 @@ static NSString *const DCFeatureChoseTopCellID = @"DCFeatureChoseTopCell";
     numberButton.inputFieldFont = 23;
     numberButton.increaseTitle = @"＋";
     numberButton.decreaseTitle = @"－";
-    num_ = (_lastNum == 0) ?  1 : _lastNum;
+    num_ = (_lastNum == 0) ?  1 : [_lastNum integerValue];
     numberButton.currentNumber = num_;
     numberButton.delegate = self;
     
@@ -228,15 +228,31 @@ static NSString *const DCFeatureChoseTopCellID = @"DCFeatureChoseTopCell";
 #pragma mark - 退出当前界面
 - (void)dismissFeatureViewControllerWithTag:(NSInteger)tag
 {
+
     __weak typeof(self)weakSelf = self;
     [weakSelf dismissViewControllerAnimated:YES completion:^{
         if (![weakSelf.cell.chooseAttLabel.text isEqualToString:@"有货"]) {//当选择全属性才传递出去
-            if (_seleArray.count == 0) {
-                NSMutableArray *numArray = [NSMutableArray arrayWithArray:_lastSeleArray];
-                !weakSelf.userChooseBlock ? : weakSelf.userChooseBlock(numArray,num_,tag);
-            }else{
-                !weakSelf.userChooseBlock ? : weakSelf.userChooseBlock(_seleArray,num_,tag);
-            }
+            
+            dispatch_sync(dispatch_get_global_queue(0, 0), ^{
+                if (_seleArray.count == 0) {
+                    NSMutableArray *numArray = [NSMutableArray arrayWithArray:_lastSeleArray];
+                    NSDictionary *paDict = @{
+                                             @"Tag" : [NSString stringWithFormat:@"%zd",tag],
+                                             @"Num" : [NSString stringWithFormat:@"%zd",num_],
+                                             @"Array" : numArray
+                                             };
+                    NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:paDict];
+                    [[NSNotificationCenter defaultCenter]postNotificationName:@"itemSelectBack" object:nil userInfo:dict];
+                }else{
+                    NSDictionary *paDict = @{
+                                             @"Tag" : [NSString stringWithFormat:@"%zd",tag],
+                                             @"Num" : [NSString stringWithFormat:@"%zd",num_],
+                                             @"Array" : _seleArray
+                                             };
+                    NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:paDict];
+                    [[NSNotificationCenter defaultCenter]postNotificationName:@"itemSelectBack" object:nil userInfo:dict];
+                }
+            });
         }
     }];
 }
@@ -297,7 +313,7 @@ static NSString *const DCFeatureChoseTopCellID = @"DCFeatureChoseTopCell";
             }
         }
     }
-    NSLog(@"seleArray:%zd",_seleArray.count);
+    
     //刷新tableView和collectionView
     [self.collectionView reloadData];
     [self.tableView reloadData];
