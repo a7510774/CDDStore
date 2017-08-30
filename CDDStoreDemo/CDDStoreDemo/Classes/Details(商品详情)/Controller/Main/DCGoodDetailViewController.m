@@ -175,11 +175,11 @@
         if (isChange) {
             weakSelf.title = @"图文详情";
             weakSelf.navigationItem.titleView = nil;
-                self.scrollerView.contentSize = CGSizeMake(self.view.dc_width, 0);
+            weakSelf.scrollerView.contentSize = CGSizeMake(weakSelf.view.dc_width, 0);
         }else{
             weakSelf.title = nil;
             weakSelf.navigationItem.titleView = weakSelf.bgView;
-            self.scrollerView.contentSize = CGSizeMake(self.view.dc_width * self.childViewControllers.count, 0);
+            weakSelf.scrollerView.contentSize = CGSizeMake(weakSelf.view.dc_width * weakSelf.childViewControllers.count, 0);
         }
     };
     [self addChildViewController:goodBaseVc];
