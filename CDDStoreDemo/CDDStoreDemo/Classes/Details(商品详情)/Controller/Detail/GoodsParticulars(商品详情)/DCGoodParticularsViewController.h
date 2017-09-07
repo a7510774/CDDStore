@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DCGoodParticularsViewController : UIViewController
+#import "DCPagerController.h"
+
+@interface DCGoodParticularsViewController : DCPagerController
 
 @end

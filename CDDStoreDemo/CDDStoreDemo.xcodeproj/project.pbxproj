@@ -23,9 +23,14 @@
 		181AEDB11F4BC9A8003DB950 /* DCHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDAA1F4BC9A8003DB950 /* DCHeaderReusableView.m */; };
 		181AEDB21F4BC9A8003DB950 /* DCHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */; };
 		181AEDE81F4BF802003DB950 /* DCSildeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDE71F4BF802003DB950 /* DCSildeBarView.m */; };
+		186CFAA71F614B9E006A9A9A /* DCPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFA9A1F614B9E006A9A9A /* DCPagerController.m */; };
+		186CFAA81F614B9E006A9A9A /* UIView+DCPagerFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFA9E1F614B9E006A9A9A /* UIView+DCPagerFrame.m */; };
+		186CFAA91F614B9E006A9A9A /* DCPagerConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAA11F614B9E006A9A9A /* DCPagerConsts.m */; };
+		186CFAAA1F614B9E006A9A9A /* DCPagerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAA61F614B9E006A9A9A /* DCPagerProgressView.m */; };
+		186CFAAE1F615660006A9A9A /* GQGesVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAAD1F615660006A9A9A /* GQGesVCTransition.m */; };
+		186CFAB11F6156AD006A9A9A /* DCParticularsShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAB01F6156AD006A9A9A /* DCParticularsShowViewController.m */; };
 		187E678B1E7D793100722607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E678A1E7D793100722607 /* main.m */; };
 		187E67991E7D793100722607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E67971E7D793100722607 /* LaunchScreen.storyboard */; };
-		18B859AB1F21A08A008852A7 /* GQGesVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B859AA1F21A08A008852A7 /* GQGesVCTransition.m */; };
 		18DCA3091F1F4187008BF67E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA13E1F1F4186008BF67E /* AppDelegate.m */; };
 		18DCA30A1F1F4187008BF67E /* DCCommodityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1431F1F4186008BF67E /* DCCommodityViewController.m */; };
 		18DCA30C1F1F4187008BF67E /* DCFootprintGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA1481F1F4186008BF67E /* DCFootprintGoodsViewController.m */; };
@@ -261,14 +266,25 @@
 		181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCHeaderReusableView.xib; sourceTree = "<group>"; };
 		181AEDE61F4BF802003DB950 /* DCSildeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSildeBarView.h; sourceTree = "<group>"; };
 		181AEDE71F4BF802003DB950 /* DCSildeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSildeBarView.m; sourceTree = "<group>"; };
+		186CFA991F614B9E006A9A9A /* DCPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerController.h; sourceTree = "<group>"; };
+		186CFA9A1F614B9E006A9A9A /* DCPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPagerController.m; sourceTree = "<group>"; };
+		186CFA9D1F614B9E006A9A9A /* UIView+DCPagerFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCPagerFrame.h"; sourceTree = "<group>"; };
+		186CFA9E1F614B9E006A9A9A /* UIView+DCPagerFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCPagerFrame.m"; sourceTree = "<group>"; };
+		186CFAA01F614B9E006A9A9A /* DCPagerConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerConsts.h; sourceTree = "<group>"; };
+		186CFAA11F614B9E006A9A9A /* DCPagerConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPagerConsts.m; sourceTree = "<group>"; };
+		186CFAA31F614B9E006A9A9A /* DCPagerMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerMacros.h; sourceTree = "<group>"; };
+		186CFAA51F614B9E006A9A9A /* DCPagerProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerProgressView.h; sourceTree = "<group>"; };
+		186CFAA61F614B9E006A9A9A /* DCPagerProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPagerProgressView.m; sourceTree = "<group>"; };
+		186CFAAC1F615660006A9A9A /* GQGesVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQGesVCTransition.h; sourceTree = "<group>"; };
+		186CFAAD1F615660006A9A9A /* GQGesVCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQGesVCTransition.m; sourceTree = "<group>"; };
+		186CFAAF1F6156AD006A9A9A /* DCParticularsShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCParticularsShowViewController.h; sourceTree = "<group>"; };
+		186CFAB01F6156AD006A9A9A /* DCParticularsShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCParticularsShowViewController.m; sourceTree = "<group>"; };
 		187E67861E7D793000722607 /* CDDStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E678A1E7D793100722607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		187E67981E7D793100722607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		187E679A1E7D793100722607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187E679F1E7D793100722607 /* CDDStoreDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDDStoreDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E67AA1E7D793100722607 /* CDDStoreDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDDStoreDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18B859A91F21A08A008852A7 /* GQGesVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQGesVCTransition.h; sourceTree = "<group>"; };
-		18B859AA1F21A08A008852A7 /* GQGesVCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQGesVCTransition.m; sourceTree = "<group>"; };
 		18DCA13D1F1F4186008BF67E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18DCA13E1F1F4186008BF67E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18DCA1421F1F4186008BF67E /* DCCommodityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCommodityViewController.h; sourceTree = "<group>"; };
@@ -714,6 +730,8 @@
 			children = (
 				181AED7F1F4BC646003DB950 /* DCGoodParticularsViewController.h */,
 				181AED801F4BC646003DB950 /* DCGoodParticularsViewController.m */,
+				186CFAAF1F6156AD006A9A9A /* DCParticularsShowViewController.h */,
+				186CFAB01F6156AD006A9A9A /* DCParticularsShowViewController.m */,
 			);
 			path = "GoodsParticulars(商品详情)";
 			sourceTree = "<group>";
@@ -739,6 +757,79 @@
 				181AEDE71F4BF802003DB950 /* DCSildeBarView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		186CFA971F614B9E006A9A9A /* CDDPagerController */ = {
+			isa = PBXGroup;
+			children = (
+				186CFA981F614B9E006A9A9A /* Controller */,
+				186CFA9B1F614B9E006A9A9A /* Expand(扩展) */,
+				186CFAA41F614B9E006A9A9A /* View */,
+			);
+			path = CDDPagerController;
+			sourceTree = "<group>";
+		};
+		186CFA981F614B9E006A9A9A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				186CFA991F614B9E006A9A9A /* DCPagerController.h */,
+				186CFA9A1F614B9E006A9A9A /* DCPagerController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		186CFA9B1F614B9E006A9A9A /* Expand(扩展) */ = {
+			isa = PBXGroup;
+			children = (
+				186CFA9C1F614B9E006A9A9A /* Category(分类) */,
+				186CFA9F1F614B9E006A9A9A /* Const(常量) */,
+				186CFAA21F614B9E006A9A9A /* Macros(宏) */,
+			);
+			path = "Expand(扩展)";
+			sourceTree = "<group>";
+		};
+		186CFA9C1F614B9E006A9A9A /* Category(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				186CFA9D1F614B9E006A9A9A /* UIView+DCPagerFrame.h */,
+				186CFA9E1F614B9E006A9A9A /* UIView+DCPagerFrame.m */,
+			);
+			path = "Category(分类)";
+			sourceTree = "<group>";
+		};
+		186CFA9F1F614B9E006A9A9A /* Const(常量) */ = {
+			isa = PBXGroup;
+			children = (
+				186CFAA01F614B9E006A9A9A /* DCPagerConsts.h */,
+				186CFAA11F614B9E006A9A9A /* DCPagerConsts.m */,
+			);
+			path = "Const(常量)";
+			sourceTree = "<group>";
+		};
+		186CFAA21F614B9E006A9A9A /* Macros(宏) */ = {
+			isa = PBXGroup;
+			children = (
+				186CFAA31F614B9E006A9A9A /* DCPagerMacros.h */,
+			);
+			path = "Macros(宏)";
+			sourceTree = "<group>";
+		};
+		186CFAA41F614B9E006A9A9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				186CFAA51F614B9E006A9A9A /* DCPagerProgressView.h */,
+				186CFAA61F614B9E006A9A9A /* DCPagerProgressView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		186CFAAB1F615660006A9A9A /* GQGesVCTransition */ = {
+			isa = PBXGroup;
+			children = (
+				186CFAAC1F615660006A9A9A /* GQGesVCTransition.h */,
+				186CFAAD1F615660006A9A9A /* GQGesVCTransition.m */,
+			);
+			path = GQGesVCTransition;
 			sourceTree = "<group>";
 		};
 		187E677D1E7D793000722607 = {
@@ -781,15 +872,6 @@
 				187E678A1E7D793100722607 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		18B859A51F218DF7008852A7 /* GQGesVCTransition */ = {
-			isa = PBXGroup;
-			children = (
-				18B859A91F21A08A008852A7 /* GQGesVCTransition.h */,
-				18B859AA1F21A08A008852A7 /* GQGesVCTransition.m */,
-			);
-			path = GQGesVCTransition;
 			sourceTree = "<group>";
 		};
 		18DCA13A1F1F4186008BF67E /* Classes */ = {
@@ -1275,7 +1357,8 @@
 		18DCA1F91F1F4186008BF67E /* Vendors(第三方) */ = {
 			isa = PBXGroup;
 			children = (
-				18B859A51F218DF7008852A7 /* GQGesVCTransition */,
+				186CFAAB1F615660006A9A9A /* GQGesVCTransition */,
+				186CFA971F614B9E006A9A9A /* CDDPagerController */,
 				18DCA1FA1F1F4186008BF67E /* AddressManager */,
 				18DCA1FE1F1F4186008BF67E /* AlertViewManager */,
 				18DCA2041F1F4186008BF67E /* DBModel */,
@@ -2130,6 +2213,7 @@
 				18DCA30C1F1F4187008BF67E /* DCFootprintGoodsViewController.m in Sources */,
 				18DCA3C71F1F4187008BF67E /* DCRecommendItem.m in Sources */,
 				181AED811F4BC646003DB950 /* DCFeatureSelectionViewController.m in Sources */,
+				186CFAAA1F614B9E006A9A9A /* DCPagerProgressView.m in Sources */,
 				18DCA33E1F1F4187008BF67E /* DCPartCommentHeadView.m in Sources */,
 				18DCA3091F1F4187008BF67E /* AppDelegate.m in Sources */,
 				18DCA3851F1F4187008BF67E /* XWFilterAnimator+XWPageCurl.m in Sources */,
@@ -2163,6 +2247,7 @@
 				18DCA3A81F1F4187008BF67E /* DCFlowItem.m in Sources */,
 				18DCA3651F1F4187008BF67E /* ScanResultViewController.m in Sources */,
 				18DCA3641F1F4187008BF67E /* MyQRViewController.m in Sources */,
+				186CFAB11F6156AD006A9A9A /* DCParticularsShowViewController.m in Sources */,
 				18DCA3381F1F4187008BF67E /* DCCommentCell.m in Sources */,
 				18DCA3141F1F4187008BF67E /* DCListGridCell.m in Sources */,
 				181AEDB01F4BC9A8003DB950 /* DCFooterReusableView.m in Sources */,
@@ -2181,6 +2266,7 @@
 				18DCA3761F1F4187008BF67E /* XWCoolAnimator+XWExplode.m in Sources */,
 				18DCA3901F1F4187008BF67E /* DCGoodsHandheldCell.m in Sources */,
 				18DCA3451F1F4187008BF67E /* UIImageView+DCExtension.m in Sources */,
+				186CFAA81F614B9E006A9A9A /* UIView+DCPagerFrame.m in Sources */,
 				18DCA34A1F1F4187008BF67E /* DCUpDownButton.m in Sources */,
 				18DCA31B1F1F4187008BF67E /* DCHoverFlowLayout.m in Sources */,
 				18DCA35F1F1F4187008BF67E /* LBXScanViewStyle.m in Sources */,
@@ -2211,6 +2297,7 @@
 				18DCA33D1F1F4187008BF67E /* DCDetailPartCommentCell.m in Sources */,
 				18DCA3CA1F1F4187008BF67E /* DCRecommendReusableView.m in Sources */,
 				18DCA35D1F1F4187008BF67E /* LBXScanView.m in Sources */,
+				186CFAA71F614B9E006A9A9A /* DCPagerController.m in Sources */,
 				18DCA3541F1F4187008BF67E /* JKDBModel.m in Sources */,
 				18DCA36A1F1F4187008BF67E /* UINavigationController+XWTransition.m in Sources */,
 				18DCA3951F1F4187008BF67E /* DCTopLineFootView.m in Sources */,
@@ -2242,6 +2329,7 @@
 				18DCA3671F1F4187008BF67E /* SubLBXScanViewController.m in Sources */,
 				18DCA35C1F1F4187008BF67E /* LBXScanVideoZoomView.m in Sources */,
 				18DCA37D1F1F4187008BF67E /* XWCoolAnimator.m in Sources */,
+				186CFAAE1F615660006A9A9A /* GQGesVCTransition.m in Sources */,
 				18DCA37E1F1F4187008BF67E /* XWDrawerAnimator.m in Sources */,
 				18DCA3AE1F1F4187008BF67E /* DCSettingCell.m in Sources */,
 				181AED851F4BC646003DB950 /* DCToolsViewController.m in Sources */,
@@ -2262,10 +2350,10 @@
 				18DCA37B1F1F4187008BF67E /* XWCoolAnimator+XWPortal.m in Sources */,
 				18DCA37F1F1F4187008BF67E /* XWFilterAnimator+XWBarSwipe.m in Sources */,
 				18DCA38C1F1F4187008BF67E /* DCGridItem.m in Sources */,
-				18B859AB1F21A08A008852A7 /* GQGesVCTransition.m in Sources */,
 				18DCA3A21F1F4187008BF67E /* DCMySelfMessageViewController.m in Sources */,
 				18DCA31D1F1F4187008BF67E /* DCFootprintCell.m in Sources */,
 				18DCA3561F1F4187008BF67E /* PPNumberButton.m in Sources */,
+				186CFAA91F614B9E006A9A9A /* DCPagerConsts.m in Sources */,
 				18DCA30E1F1F4187008BF67E /* DCCalssSubItem.m in Sources */,
 				18DCA3AB1F1F4187008BF67E /* DCHelpBackSquareCell.m in Sources */,
 				18DCA32C1F1F4187008BF67E /* DCDeatilCustomHeadView.m in Sources */,

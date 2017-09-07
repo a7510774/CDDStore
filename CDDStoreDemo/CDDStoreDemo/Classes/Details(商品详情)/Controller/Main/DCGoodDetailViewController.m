@@ -19,6 +19,7 @@
 // Views
 
 // Vendors
+
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
 // Categories
@@ -49,6 +50,7 @@
         _scrollerView.showsVerticalScrollIndicator = NO;
         _scrollerView.showsHorizontalScrollIndicator = NO;
         _scrollerView.pagingEnabled = YES;
+        _scrollerView.bounces = NO;
         _scrollerView.delegate = self;
         [self.view addSubview:_scrollerView];
     }
@@ -82,9 +84,7 @@
     self.scrollerView.backgroundColor = self.view.backgroundColor;
     self.scrollerView.contentSize = CGSizeMake(self.view.dc_width * self.childViewControllers.count, 0);
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
 }
-
 
 #pragma mark - 接受通知
 - (void)acceptanceNote
@@ -121,7 +121,7 @@
         [button setTitle:titles[i] forState:0];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         button.tag = i;
-        button.titleLabel.font = PFR15Font;
+        button.titleLabel.font = PFR16Font;
         [button addTarget:self action:@selector(topBottonClick:) forControlEvents:UIControlEventTouchUpInside];
         CGFloat buttonX = i * (buttonW + margin);
         
@@ -210,6 +210,7 @@
     for (NSInteger i = 0; i < imagesNor.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:imagesNor[i]] forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor whiteColor];
         [button setImage:[UIImage imageNamed:imagesSel[i]] forState:UIControlStateSelected];
         button.tag = i;
         [button addTarget:self action:@selector(bottomButtonClick:) forControlEvents:UIControlEventTouchUpInside];

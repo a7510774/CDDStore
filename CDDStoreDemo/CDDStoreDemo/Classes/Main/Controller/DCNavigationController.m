@@ -37,6 +37,7 @@
 #pragma mark - LifeCyle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [GQGesVCTransition validateGesBackWithType:GQGesVCTransitionTypePanWithPercentRight withRequestFailToLoopScrollView:YES]; //手势返回
 }
 

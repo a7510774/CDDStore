@@ -59,4 +59,12 @@
 #define GoodsHandheldImagesArray  @[@"http://gfs1.gomein.net.cn/T1koKvBT_g1RCvBVdK.jpg",@"http://gfs3.gomein.net.cn/T1n5JvB_Eb1RCvBVdK.jpg",@"http://gfs10.gomein.net.cn/T1jThTB_Ls1RCvBVdK.jpeg",@"http://gfs7.gomein.net.cn/T1T.YvBbbg1RCvBVdK.jpg",@"http://gfs6.gomein.net.cn/T1toCvBKKT1RCvBVdK.jpg",@"http://gfs5.gomein.net.cn/T1JZLvB4Jj1RCvBVdK.jpg",@"http://gfs5.gomein.net.cn/T1JZLvB4Jj1RCvBVdK.jpg",@"http://gfs3.gomein.net.cn/T1ckKvBTW_1RCvBVdK.jpg",@"http://gfs.gomein.net.cn/T1hNCvBjKT1RCvBVdK.jpg"]
 
 
+//URL
+#define CDDWeiBo @"http://weibo.com/u/5605532343"
+
+#define CDDJianShu01 @"http://www.jianshu.com/p/3f248b614bdc"
+#define CDDJianShu02 @"http://www.jianshu.com/p/1b19028dc975"
+#define CDDJianShu03 @"http://www.jianshu.com/p/cc92ea70addf"
+#define CDDJianShu04 @"http://www.jianshu.com/p/d08ab02d219c"
+
 #endif /* Macros_h */

@@ -156,6 +156,9 @@ static NSArray *lastSeleArray_;
     [self acceptanceNote];
 }
 
+
+
+
 #pragma mark - initialize
 - (void)setUpInit
 {
@@ -167,6 +170,7 @@ static NSArray *lastSeleArray_;
     //初始化
     lastSeleArray_ = [NSArray array];
     lastNum_ = 0;
+    
 }
 
 #pragma mark - 接受通知
@@ -241,7 +245,7 @@ static NSArray *lastSeleArray_;
 #pragma mark - 记载图文详情
 - (void)setUpGoodsWKWebView
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://weibo.com/u/5605532343"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:CDDWeiBo]];
     [self.webView loadRequest:request];
     
     //下拉返回商品详情View
