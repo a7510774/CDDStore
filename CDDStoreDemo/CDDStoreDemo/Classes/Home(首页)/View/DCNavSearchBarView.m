@@ -24,19 +24,33 @@
 
 @end
 
+static bool closeIntrinsic = false;//Intrinsic的影响
+
 @implementation DCNavSearchBarView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
         [self setUpUI];
-        
         UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(searchClick)];
         [self addGestureRecognizer:tapGesture];
     }
     return self;
 }
 
+
+/**
+ 通过覆盖intrinsicContentSize函数修改自定义View的Intrinsic的大小
+ @return CGSize
+ */
+-(CGSize)intrinsicContentSize
+{
+    if (closeIntrinsic) {
+        return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
+    } else {
+        return CGSizeMake(self.dc_width, self.dc_height);
+    }
+}
 
 - (void)setUpUI
 {

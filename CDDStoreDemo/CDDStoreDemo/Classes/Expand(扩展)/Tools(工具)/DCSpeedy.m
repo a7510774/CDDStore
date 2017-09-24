@@ -131,4 +131,21 @@
     return _decodedImage;
 }
 
++ (void)dc_SetUpAlterWithView:(UIViewController *)vc Message:(NSString *)message Sure:(void(^)())sureBlock Cancel:(void(^)())cancelBlock
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    //取消
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+        !cancelBlock ? : cancelBlock();
+    }];
+    //确定
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        !sureBlock ? : sureBlock();
+    }];
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+    
+    [vc presentViewController:alertController animated:YES completion:nil];
+}
+
 @end

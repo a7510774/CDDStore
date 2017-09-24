@@ -21,4 +21,10 @@
 /** 搜索 */
 @property (nonatomic, copy) dispatch_block_t searchViewBlock;
 
+
+/**
+ intrinsicContentSize
+ */
+@property(nonatomic, assign) CGSize intrinsicContentSize;
+
 @end

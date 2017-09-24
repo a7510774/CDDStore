@@ -134,11 +134,12 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
 
     DCNavSearchBarView *searchBarVc = [[DCNavSearchBarView alloc] init];
     searchBarVc.placeholdLabel.text = @"快速查找商品";
-    searchBarVc.frame = CGRectMake(40, 25, ScreenW - 120, 35);
+    searchBarVc.frame = CGRectMake(40, 25, ScreenW * 0.68, 35);
     searchBarVc.voiceImageBtn.hidden = YES;
     searchBarVc.searchViewBlock = ^{
         NSLog(@"搜索");
     };
+    
     self.navigationItem.titleView = searchBarVc;
 }
 

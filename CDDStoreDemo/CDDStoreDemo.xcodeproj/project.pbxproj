@@ -23,6 +23,10 @@
 		181AEDB11F4BC9A8003DB950 /* DCHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDAA1F4BC9A8003DB950 /* DCHeaderReusableView.m */; };
 		181AEDB21F4BC9A8003DB950 /* DCHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */; };
 		181AEDE81F4BF802003DB950 /* DCSildeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDE71F4BF802003DB950 /* DCSildeBarView.m */; };
+		1862FBCB1F67D7D50001B8BE /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBC41F67D7D50001B8BE /* EGOCache.m */; };
+		1862FBCC1F67D7D50001B8BE /* NetworkUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBC61F67D7D50001B8BE /* NetworkUnit.m */; };
+		1862FBCD1F67D7D50001B8BE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBC81F67D7D50001B8BE /* Reachability.m */; };
+		1862FBCE1F67D7D50001B8BE /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBCA1F67D7D50001B8BE /* RequestTool.m */; };
 		186CFAA71F614B9E006A9A9A /* DCPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFA9A1F614B9E006A9A9A /* DCPagerController.m */; };
 		186CFAA81F614B9E006A9A9A /* UIView+DCPagerFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFA9E1F614B9E006A9A9A /* UIView+DCPagerFrame.m */; };
 		186CFAA91F614B9E006A9A9A /* DCPagerConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAA11F614B9E006A9A9A /* DCPagerConsts.m */; };
@@ -266,6 +270,14 @@
 		181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCHeaderReusableView.xib; sourceTree = "<group>"; };
 		181AEDE61F4BF802003DB950 /* DCSildeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSildeBarView.h; sourceTree = "<group>"; };
 		181AEDE71F4BF802003DB950 /* DCSildeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSildeBarView.m; sourceTree = "<group>"; };
+		1862FBC31F67D7D50001B8BE /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		1862FBC41F67D7D50001B8BE /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		1862FBC51F67D7D50001B8BE /* NetworkUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUnit.h; sourceTree = "<group>"; };
+		1862FBC61F67D7D50001B8BE /* NetworkUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUnit.m; sourceTree = "<group>"; };
+		1862FBC71F67D7D50001B8BE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1862FBC81F67D7D50001B8BE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1862FBC91F67D7D50001B8BE /* RequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTool.h; sourceTree = "<group>"; };
+		1862FBCA1F67D7D50001B8BE /* RequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestTool.m; sourceTree = "<group>"; };
 		186CFA991F614B9E006A9A9A /* DCPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerController.h; sourceTree = "<group>"; };
 		186CFA9A1F614B9E006A9A9A /* DCPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPagerController.m; sourceTree = "<group>"; };
 		186CFA9D1F614B9E006A9A9A /* UIView+DCPagerFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCPagerFrame.h"; sourceTree = "<group>"; };
@@ -757,6 +769,21 @@
 				181AEDE71F4BF802003DB950 /* DCSildeBarView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		1862FBC21F67D7D50001B8BE /* RequestTool */ = {
+			isa = PBXGroup;
+			children = (
+				1862FBC31F67D7D50001B8BE /* EGOCache.h */,
+				1862FBC41F67D7D50001B8BE /* EGOCache.m */,
+				1862FBC51F67D7D50001B8BE /* NetworkUnit.h */,
+				1862FBC61F67D7D50001B8BE /* NetworkUnit.m */,
+				1862FBC71F67D7D50001B8BE /* Reachability.h */,
+				1862FBC81F67D7D50001B8BE /* Reachability.m */,
+				1862FBC91F67D7D50001B8BE /* RequestTool.h */,
+				1862FBCA1F67D7D50001B8BE /* RequestTool.m */,
+			);
+			path = RequestTool;
 			sourceTree = "<group>";
 		};
 		186CFA971F614B9E006A9A9A /* CDDPagerController */ = {
@@ -1357,6 +1384,7 @@
 		18DCA1F91F1F4186008BF67E /* Vendors(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				1862FBC21F67D7D50001B8BE /* RequestTool */,
 				186CFAAB1F615660006A9A9A /* GQGesVCTransition */,
 				186CFA971F614B9E006A9A9A /* CDDPagerController */,
 				18DCA1FA1F1F4186008BF67E /* AddressManager */,
@@ -2053,7 +2081,7 @@
 				TargetAttributes = {
 					187E67851E7D793000722607 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 25H67J6944;
+						DevelopmentTeam = W2WUVUE5P6;
 						ProvisioningStyle = Automatic;
 					};
 					187E679E1E7D793100722607 = {
@@ -2241,8 +2269,10 @@
 				18DCA3431F1F4187008BF67E /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				18DCA3301F1F4187008BF67E /* DCDetailLikeItemCell.m in Sources */,
 				18DCA39C1F1F4187008BF67E /* DCZuoWenRightButton.m in Sources */,
+				1862FBCD1F67D7D50001B8BE /* Reachability.m in Sources */,
 				18DCA3531F1F4187008BF67E /* JKDBHelper.m in Sources */,
 				18DCA39B1F1F4187008BF67E /* DCNumericalScrollView.m in Sources */,
+				1862FBCE1F67D7D50001B8BE /* RequestTool.m in Sources */,
 				18DCA3811F1F4187008BF67E /* XWFilterAnimator+XWCopyMachine.m in Sources */,
 				18DCA3A81F1F4187008BF67E /* DCFlowItem.m in Sources */,
 				18DCA3651F1F4187008BF67E /* ScanResultViewController.m in Sources */,
@@ -2357,7 +2387,9 @@
 				18DCA30E1F1F4187008BF67E /* DCCalssSubItem.m in Sources */,
 				18DCA3AB1F1F4187008BF67E /* DCHelpBackSquareCell.m in Sources */,
 				18DCA32C1F1F4187008BF67E /* DCDeatilCustomHeadView.m in Sources */,
+				1862FBCB1F67D7D50001B8BE /* EGOCache.m in Sources */,
 				18DCA34B1F1F4187008BF67E /* DCKeepNewUserData.m in Sources */,
+				1862FBCC1F67D7D50001B8BE /* NetworkUnit.m in Sources */,
 				181AEDB11F4BC9A8003DB950 /* DCHeaderReusableView.m in Sources */,
 				18DCA3691F1F4187008BF67E /* UIAlertView+LBXAlertAction.m in Sources */,
 				18DCA3341F1F4187008BF67E /* DCShowTypeFourCell.m in Sources */,
@@ -2521,14 +2553,16 @@
 			baseConfigurationReference = B6042526F9488CF29434ADDB /* Pods-CDDStoreDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 25H67J6944;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = W2WUVUE5P6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = CDDStoreDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SVU.RocketsChen.CDDMall;
+				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -2537,14 +2571,16 @@
 			baseConfigurationReference = F3736E949C41228120EF9FC0 /* Pods-CDDStoreDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 25H67J6944;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = W2WUVUE5P6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = CDDStoreDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SVU.RocketsChen.CDDMall;
+				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

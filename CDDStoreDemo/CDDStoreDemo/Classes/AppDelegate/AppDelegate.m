@@ -10,6 +10,10 @@
 #import "JKDBModel.h"
 #import "DCTabBarController.h"
 
+#import "RequestTool.h"
+#import "NetworkUnit.h"
+#import <SVProgressHUD.h>
+
 @interface AppDelegate ()
 
 @end
@@ -26,6 +30,11 @@
     [self.window makeKeyAndVisible];
     
     [self setUpUserData]; //设置数据
+    
+    [self CDDMallVersionInformationFromPGY]; //蒲公英自动更新
+    
+    [self getNetwork]; //获取网络
+    
     
     return YES;
 }
@@ -48,6 +57,19 @@
         dispatch_async(dispatch_get_global_queue(0, 0), ^{//异步保存
             [userInfo save];
         });
+    }
+}
+
+
+/**
+ 获取网络
+ */
+- (void)getNetwork
+{
+    if ([[NetworkUnit getInternetStatus] isEqualToString:@"notReachable"]) { //网络
+        [SVProgressHUD showInfoWithStatus:@"当前无网络"];
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        [SVProgressHUD dismissWithDelay:1.0];
     }
 }
 
@@ -75,6 +97,61 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark - 蒲公英版本更新检测
+- (void)CDDMallVersionInformationFromPGY
+{
+    NSDictionary *dict = @{
+                          @"shortcut" : VERSION_Shortcut,  //应用页面地址后缀
+                          @"_api_key" : [NSString stringWithFormat:@"%@",VERSION_API_KEY]
+                          };
+    
+    [RequestTool requestWithType:POST URL:VERSION_HTTPS_SERVER parameter:dict successComplete:^(id responseObject) {
+        
+        if ([[responseObject valueForKey:@"code"] intValue] == 0) {
+            NSLog(@"CDDMall请求成功 appVersion%@,appVersionNo%@",[[responseObject valueForKey:@"data"] valueForKey:@"appVersion"],[[responseObject valueForKey:@"data"] valueForKey:@"appVersionNo"]);
+            
+            NSString *newVersion = [[responseObject valueForKey:@"data"] valueForKey:@"appVersion"];
+            NSString *newBiuld = [[responseObject valueForKey:@"data"] valueForKey:@"appVersionNo"]; //为@""之前未上传过版本
+            NSString *beforeVersion = BIULD_VERSION;
+            NSString *beforeBiuld = BUNDLE_VERSION;
+            
+            if ((![newVersion isEqualToString:beforeVersion] || ![newBiuld isEqualToString:beforeBiuld] ) && ![newBiuld isEqualToString:@""]){
+                
+                NSDictionary *dict = @{
+                                       @"uKey" : VERSION_User_Key,
+                                       @"_api_key" : [NSString stringWithFormat:@"%@",VERSION_API_KEY],
+                                       @"aKey" : [[responseObject valueForKey:@"data"] valueForKey:@"appKey"]
+                                       };
+                
+                [RequestTool requestWithType:POST URL:VERSION_HTTPS_INFO parameter:dict successComplete:^(id responseObject) {
+                    
+                    UIWindow *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+                    alertWindow.rootViewController = [[UIViewController alloc] init];
+                    alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                    [alertWindow makeKeyAndVisible];
+                    
+                    [DCSpeedy dc_SetUpAlterWithView:alertWindow.rootViewController Message:[NSString stringWithFormat:@"CDDMall有新版本，请前往更新\n更新内容：%@",[[responseObject valueForKey:@"data"] valueForKey:@"appUpdateDescription"]] Sure:^{
+                        
+                        //现在绑定
+                        NSURL *url = [NSURL URLWithString:VERSION_Itms_Services];
+                        [[UIApplication sharedApplication] openURL:url];
+                        
+                    } Cancel:nil];
+                    
+                } failureComplete:^(NSError *error) {
+                    
+                }];
+            }
+        }
+
+    } failureComplete:^(NSError *error) {
+        
+        NSLog(@"蒲公英请求失败~");
+        
+    }];
 }
 
 

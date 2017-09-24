@@ -52,6 +52,9 @@
 /* 滚回顶部按钮 */
 @property (strong , nonatomic)UIButton *backTopButton;
 
+///* 适配 */
+//@property(nonatomic, assign) CGSize intrinsicContentSize;
+
 @end
 /* cell */
 static NSString *const DCGoodsCountDownCellID = @"DCGoodsCountDownCell";
@@ -153,15 +156,15 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
 
     DCNavSearchBarView *searchBarVc = [[DCNavSearchBarView alloc] init];
     searchBarVc.placeholdLabel.text = @"618 100元红包等你来抢";
-    searchBarVc.frame = CGRectMake(60, 25, ScreenW - 120, 35);
+    searchBarVc.frame = CGRectMake(60, 25, ScreenW * 0.68, 35);
     searchBarVc.voiceButtonClickBlock = ^{
         NSLog(@"语音点击回调");
     };
     searchBarVc.searchViewBlock = ^{
         NSLog(@"搜索");
     };
-    
     self.navigationItem.titleView = searchBarVc;
+    
 }
 
 #pragma mark - <UICollectionViewDataSource>

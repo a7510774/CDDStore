@@ -132,7 +132,7 @@ static NSString *const DCBrandSortCellID = @"DCBrandSortCell";
     
     DCNavSearchBarView *searchBarVc = [[DCNavSearchBarView alloc] init];
     searchBarVc.placeholdLabel.text = @"快速查找商品";
-    searchBarVc.frame = CGRectMake(20, 25, ScreenW - 40, 35);
+    searchBarVc.frame = CGRectMake(20, 25, ScreenW * 0.88, 35);
     searchBarVc.voiceButtonClickBlock = ^{
         NSLog(@"语音点击回调");
     };

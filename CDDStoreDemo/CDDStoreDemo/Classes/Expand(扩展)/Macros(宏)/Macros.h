@@ -67,4 +67,26 @@
 #define CDDJianShu03 @"http://www.jianshu.com/p/cc92ea70addf"
 #define CDDJianShu04 @"http://www.jianshu.com/p/d08ab02d219c"
 
+
+/*****************  蒲公英更新  ******************/
+//版本控制
+#define VERSION_HTTPS_SERVER @"http://www.pgyer.com/apiv1/app/getAppKeyByShortcut"
+//版本更新内容
+#define VERSION_HTTPS_INFO @"http://www.pgyer.com/apiv1/app/view"
+//蒲公英应用api_Key
+#define VERSION_API_KEY @"e08ad9d9e8fb4dee72c44cb486be09c0"
+//蒲公英应用User_Key
+#define VERSION_User_Key @"eb79e5278779732ec8634c0c21d304ed"
+//蒲公英应用页面地址后缀
+#define VERSION_Shortcut @"Mall"
+//蒲公英应用itms-services下载
+#define VERSION_Itms_Services @"itms-services://?action=download-manifest&url=https%3A%2F%2Fwww.pgyer.com%2Fapiv1%2Fapp%2Fplist%3FaId%3Db15ba9b695d00c14e1361c24c1869a17%26_api_key%3De08ad9d9e8fb4dee72c44cb486be09c0"
+//获取当前版本号
+#define BUNDLE_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
+//获取当前版本的biuld
+#define BIULD_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+
+
+#define DIV_UUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+
 #endif /* Macros_h */

@@ -86,4 +86,6 @@
 
 #pragma mark - base64图片转编码
 + (UIImage *)Base64StrToUIImage:(NSString *)_encodedImageStr;
+
++ (void)dc_SetUpAlterWithView:(UIViewController *)vc Message:(NSString *)message Sure:(void(^)())sureBlock Cancel:(void(^)())cancelBlock;
 @end
