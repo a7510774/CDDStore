@@ -219,6 +219,7 @@
 		18DCA3CA1F1F4187008BF67E /* DCRecommendReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA3081F1F4187008BF67E /* DCRecommendReusableView.m */; };
 		18DD85C71F0650F400F47095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DD85C61F0650F400F47095 /* Assets.xcassets */; };
 		18F64B1B1F0E03F500DB978C /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */; };
+		928A971B1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928A971A1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib */; };
 		B4BD6CD985407C4066CE3D78 /* libPods-CDDStoreDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D28CF44E5CEBF6947E889711 /* libPods-CDDStoreDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -641,6 +642,7 @@
 		18DD85C61F0650F400F47095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DD85C81F06512100F47095 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang Medium.ttf"; sourceTree = "<group>"; };
+		928A971A1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCMySelfMessageViewController.xib; sourceTree = "<group>"; };
 		B6042526F9488CF29434ADDB /* Pods-CDDStoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDStoreDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDDStoreDemo/Pods-CDDStoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D28CF44E5CEBF6947E889711 /* libPods-CDDStoreDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDDStoreDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3736E949C41228120EF9FC0 /* Pods-CDDStoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDStoreDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDDStoreDemo/Pods-CDDStoreDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -1823,6 +1825,7 @@
 				18DCA2BD1F1F4187008BF67E /* DCHelpBackViewController.m */,
 				18DCA2BE1F1F4187008BF67E /* DCMySelfMessageViewController.h */,
 				18DCA2BF1F1F4187008BF67E /* DCMySelfMessageViewController.m */,
+				928A971A1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib */,
 				18DCA2C01F1F4187008BF67E /* DCReceiverAdressViewController.h */,
 				18DCA2C11F1F4187008BF67E /* DCReceiverAdressViewController.m */,
 			);
@@ -2076,7 +2079,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DC;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = RocketsChen;
 				TargetAttributes = {
 					187E67851E7D793000722607 = {
@@ -2130,6 +2133,7 @@
 				18DCA3711F1F4187008BF67E /* restrictedshine.tiff in Resources */,
 				18DCA36F1F1F4187008BF67E /* line.png in Resources */,
 				18DCA3B31F1F4187008BF67E /* ClassiftyGoods01.plist in Resources */,
+				928A971B1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib in Resources */,
 				18DCA3BA1F1F4187008BF67E /* shareTerrace.plist in Resources */,
 				18DCA3BF1F1F4187008BF67E /* MyBuyFlow.plist in Resources */,
 				18DCA3C51F1F4187008BF67E /* HomeHighGoods.plist in Resources */,
@@ -2469,7 +2473,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2477,7 +2483,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -2516,7 +2526,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2524,7 +2536,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

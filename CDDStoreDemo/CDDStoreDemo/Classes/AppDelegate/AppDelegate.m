@@ -31,9 +31,11 @@
     
     [self setUpUserData]; //设置数据
     
-    [self CDDMallVersionInformationFromPGY]; //蒲公英自动更新
+//    [self CDDMallVersionInformationFromPGY]; //蒲公英自动更新
     
     [self getNetwork]; //获取网络
+    
+    [self setUpFixiOS11]; //适配IOS 11
     
     
     return YES;
@@ -60,6 +62,17 @@
     }
 }
 
+
+#pragma mark - 适配
+- (void)setUpFixiOS11
+{
+    if (@available(ios 11.0,*)) {
+        UIScrollView.appearance.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        UITableView.appearance.estimatedRowHeight = 0;
+        UITableView.appearance.estimatedSectionFooterHeight = 0;
+        UITableView.appearance.estimatedSectionHeaderHeight = 0;
+    }
+}
 
 /**
  获取网络

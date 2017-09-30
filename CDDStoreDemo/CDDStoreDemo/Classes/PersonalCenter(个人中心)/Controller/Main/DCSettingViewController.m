@@ -105,41 +105,7 @@ static NSString *const DCSettingCellID = @"DCSettingCell";
     DCSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:DCSettingCellID forIndexPath:indexPath];
     [cell setAccessoryType:UITableViewCellAccessoryNone];
     
-    if (indexPath.section == 0) {
-        cell.type = cellTypeOne;
-        cell.titleLabel.text = @"账户安全";
-        cell.contentLabel.text = @"安全等级：高";
-        [DCSpeedy dc_setSomeOneChangeColor:cell.contentLabel SetSelectArray:@[@"低",@"中",@"高"] SetChangeColor:[UIColor orangeColor]];
-        [cell.indicateButton setImage:[UIImage imageNamed:@"icon_charge_jiantou"] forState:UIControlStateNormal];
-        
-    }else if (indexPath.section == 1){
-        if (indexPath.row == 0) {
-            cell.type = cellTypeTwo;
-            cell.titleLabel.text = @"智能省流量";
-            cell.setSwitch.on = YES;
-        }else if (indexPath.row == 1){
-            cell.type = cellTypeOne;
-            cell.titleLabel.text = @"清除缓存";
-            cell.contentLabel.text = @"6.66M";
-            [cell.indicateButton setImage:[UIImage imageNamed:@"icon_charge_jiantou"] forState:UIControlStateNormal];
-        }
-        
-    }else if (indexPath.section == 2){
-        cell.type = cellTypeTwo;
-        cell.titleLabel.text = @"接受消息通知";
-        cell.setSwitch.on = NO;
-        
-    }else if (indexPath.section == 3){
-        cell.type = cellTypeOne;
-        NSArray *titles = @[@"关于作者",@"帮助反馈",@"给我的GitHub点星",@"邮箱地址：rocketschen@foxmail.com"];
-        cell.titleLabel.text = titles[indexPath.row];
-        if (indexPath.row == 3) {
-            [cell.indicateButton setImage:[UIImage imageNamed:@"BZFK_newdianhua"] forState:UIControlStateNormal];
-        }else{
-            [cell.indicateButton setImage:[UIImage imageNamed:@"icon_charge_jiantou"] forState:UIControlStateNormal];
-        }
-    }
-    
+  
     return cell;
 }
 

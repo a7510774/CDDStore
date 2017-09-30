@@ -42,7 +42,7 @@ static NSString *const DCSettingCellID = @"DCSettingCell";
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.frame = CGRectMake(0, DCTopNavH, ScreenW, ScreenH - DCTopNavH);
+        _tableView.frame = CGRectMake(0, DCTopNavH + 180, ScreenW, ScreenH - DCTopNavH);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
@@ -72,105 +72,51 @@ static NSString *const DCSettingCellID = @"DCSettingCell";
 #pragma mark - initizlize
 - (void)setUpTab
 {
-    self.title = @"账户中心";
+    self.title = @"账户管理";
     self.view.backgroundColor = DCBGColor;
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView.scrollEnabled = NO;
 }
 
 
 
 #pragma mark - <UITableViewDataSource>
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 3;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return (section == 0) ? 6: (section == 1)? 1 : 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DCUserInfo *userInfo = UserInfoData;
     DCSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:DCSettingCellID forIndexPath:indexPath];
-    [cell setAccessoryType:UITableViewCellAccessoryNone];
-    [cell.indicateButton setImage:[UIImage imageNamed:@"icon_charge_jiantou"] forState:UIControlStateNormal];
-    if (indexPath.section == 0) {
-        NSArray *titles = @[@"头像",@"用户名",@"昵称",@"性别",@"出生日期",@"填写详细资料"];
-        cell.type = cellTypeOne;
-        if (indexPath.row == 0 ) {
-            cell.contentLabel.hidden = YES;
-            _headImageView = [UIButton buttonWithType:UIButtonTypeCustom];
-            [cell addSubview:_headImageView];
-            _headImageView.dc_size = CGSizeMake(50, 50);
-            _headImageView.dc_centerY = cell.dc_centerY;
-            _headImageView.dc_x = cell.dc_width - _headImageView.dc_width - DCMargin * 4;
-            [DCSpeedy dc_setUpBezierPathCircularLayerWith:_headImageView :CGSizeMake(_headImageView.dc_width * 0.5, _headImageView.dc_width * 0.5)];
-            
-            UIImage *image = ([userInfo.userimage isEqualToString:@"icon"]) ? [UIImage imageNamed:@"icon"] : [DCSpeedy Base64StrToUIImage:userInfo.userimage];
-            [_headImageView setImage:image forState:UIControlStateNormal];
-            _headImageView.userInteractionEnabled = NO;
-            
-        }else if (indexPath.row == 1){
-            cell.userInteractionEnabled = NO;
-            cell.indicateButton.hidden = YES;
-        }else if (indexPath.row == 4){
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.type = cellTypeThree;
-            cell.birthField.text = userInfo.birthDay;
-        }
-        cell.titleLabel.text = titles[indexPath.row];
     
-        NSArray *contents = @[@"",userInfo.username,userInfo.nickname,userInfo.sex,@"",@"完善可以涨积分哦"];
-        cell.contentLabel.text = contents[indexPath.row];
-        
-    }else if (indexPath.section == 1){
-        cell.titleLabel.text = @"收货地址管理";
-    }else if (indexPath.section == 2){
-        cell.type = cellTypeOne;
-        cell.titleLabel.text = @"账户安全";
-        cell.contentLabel.text = @"安全等级：高";
-        [DCSpeedy dc_setSomeOneChangeColor:cell.contentLabel SetSelectArray:@[@"低",@"中",@"高"] SetChangeColor:[UIColor orangeColor]];
-        [cell.indicateButton setImage:[UIImage imageNamed:@"icon_charge_jiantou"] forState:UIControlStateNormal];
-    }
+    NSArray *titles = @[@"会员俱乐部",@"收货地址",@"实名认证",@"账户安全"];
+    cell.titleLabel.text = titles[indexPath.row];
+    NSArray *contents = @[@"",@"",@"未认证",@"安全等级：中"];
+    cell.contentLabel.text = contents[indexPath.row];
     
     return cell;
 }
 
-#pragma mark - <UITableViewDelegate>
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 0.0001;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return DCMargin;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return (indexPath.section == 0 && indexPath.row == 0) ? 66 : 44 ;
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DCUserInfo *userInfo = UserInfoData;
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            [self changeProfileImage:userInfo];
-        }else if (indexPath.row == 2){
-            [self changeNickNameWith:userInfo];
-        }else if (indexPath.row == 3){
-            [self changeSex:userInfo];
-        }
-    }else if (indexPath.section == 1){
-        DCReceiverAdressViewController *reVc = [[DCReceiverAdressViewController alloc] init];
-        [self.navigationController pushViewController:reVc animated:YES];
-    }
+//    DCUserInfo *userInfo = UserInfoData;
+//    if (indexPath.section == 0) {
+//        if (indexPath.row == 0) {
+//            [self changeProfileImage:userInfo];
+//        }else if (indexPath.row == 2){
+//            [self changeNickNameWith:userInfo];
+//        }else if (indexPath.row == 3){
+//            [self changeSex:userInfo];
+//        }
+//    }else if (indexPath.section == 1){
+//        DCReceiverAdressViewController *reVc = [[DCReceiverAdressViewController alloc] init];
+//        [self.navigationController pushViewController:reVc animated:YES];
+//    }
     
 }
 

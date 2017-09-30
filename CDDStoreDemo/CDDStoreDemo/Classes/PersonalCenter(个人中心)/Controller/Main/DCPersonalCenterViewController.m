@@ -6,7 +6,7 @@
 //  Copyright © 2017年 RocketsChen. All rights reserved.
 //
 
-#define DCHeadImageTopY 180
+#define DCHeadImageTopY 200
 
 #import "DCPersonalCenterViewController.h"
 
@@ -87,14 +87,16 @@ static NSString *const DCYouLikeHeadViewID = @"DCYouLikeHeadView";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [self.collectionView reloadData];
-    [self.navigationController setNavigationBarHidden:YES];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -186,10 +188,7 @@ static NSString *const DCYouLikeHeadViewID = @"DCYouLikeHeadView";
         if (indexPath.section == 0) {
             DCMySelfHeadView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:DCMySelfHeadViewID forIndexPath:indexPath];
             __weak typeof(self)weakSelf = self;
-            DCUserInfo *userInfo = UserInfoData;
-            UIImage *image = ([userInfo.userimage isEqualToString:@"icon"]) ? [UIImage imageNamed:@"icon"] : [DCSpeedy Base64StrToUIImage:userInfo.userimage];
-            headerView.nickNameLabel.text = userInfo.nickname;
-            [headerView.headImageButton setImage:image forState:UIControlStateNormal];
+
             
             headerView.goodsCollectionClickBlock = ^{
                 NSLog(@"点击了商品收藏");
@@ -247,7 +246,7 @@ static NSString *const DCYouLikeHeadViewID = @"DCYouLikeHeadView";
 #pragma mark - head宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
 
-    return (section == 0) ? CGSizeMake(ScreenW, 400) : (section == 3) ? CGSizeMake(ScreenW, 40) : CGSizeZero;
+    return (section == 0) ? CGSizeMake(ScreenW, 380) : (section == 3) ? CGSizeMake(ScreenW, 40) : CGSizeZero;
 }
 
 #pragma mark - foot宽高
@@ -292,12 +291,11 @@ static NSString *const DCYouLikeHeadViewID = @"DCYouLikeHeadView";
     __weak typeof(self)weakSlef = self;
     [UIView animateWithDuration:0.3 animations:^{
         if (scrollView.contentOffset.y < offsetY_){
-            weakSlef.hoverNavView.dc_y = DCHeadImageTopY - 70;
+            weakSlef.hoverNavView.dc_y = - 70;
         }
     }completion:^(BOOL finished) {
-        weakSlef.hoverNavView.dc_y = -100;
         [UIView animateWithDuration:0.4 animations:^{
-            weakSlef.hoverNavView.dc_y = DCHeadImageTopY;
+            weakSlef.hoverNavView.dc_y = 0;
         }];
     }];
 }
@@ -313,8 +311,9 @@ static NSString *const DCYouLikeHeadViewID = @"DCYouLikeHeadView";
 - (void)setUpNav
 {
     _hoverNavView = [[DCHoverNavView alloc] init];
-    [self.collectionView insertSubview:_hoverNavView atIndex:0];
-    _hoverNavView.frame = CGRectMake(0, DCHeadImageTopY, ScreenW, 64);
+    
+    [self.view insertSubview:_hoverNavView aboveSubview:self.collectionView];
+    _hoverNavView.frame = CGRectMake(0, 0, ScreenW, 64);
     __weak typeof(self)weakSelf = self;
     _hoverNavView.leftItemClickBlock = ^{
         [weakSelf settingItemClick];

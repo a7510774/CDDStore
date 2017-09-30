@@ -69,6 +69,8 @@
     if (self) {
         
         [self setUpUI];
+    
+        [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
     return self;
 }
@@ -77,15 +79,7 @@
 - (void)setUpUI
 {
     _titleLabel = [[UILabel alloc] init];
-    _titleLabel.font = PFR15Font;
-  
-    _setSwitch = [[UISwitch alloc]init];
-    [_setSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-    _setSwitch.onTintColor = [UIColor redColor]; // 在oneSwitch开启的状态显示的颜色 默认是blueColor
-//    _setSwitch.tintColor = [UIColor lightGrayColor]; // 设置关闭状态的颜色
-//    _setSwitch.thumbTintColor = [UIColor whiteColor]; // 设置开关上左右滑动的小圆点的颜色
-    
-    _indicateButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _titleLabel.font = PFR16Font;
     
     _contentLabel = [[UILabel alloc] init];
     _contentLabel.textColor = [UIColor darkGrayColor];
@@ -100,6 +94,11 @@
     _birthField.textColor = [UIColor darkGrayColor];
     _birthField.font = PFR13Font;
 
+    [self addSubview:_titleLabel];
+    
+    [self addSubview:_contentLabel];
+    
+    [self addSubview:_birthField];
 }
 
 #pragma mark - Setter Getter Methods
@@ -107,57 +106,20 @@
 {
     [super layoutSubviews];
     
-    [self addSubview:_titleLabel];
-    
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         [make.left.mas_equalTo(self)setOffset:DCMargin];
         make.centerY.mas_equalTo(self);
     }];
-    if (_type == cellTypeOne) {
-        [self addSubview:_indicateButton];
-        [self addSubview:_contentLabel];
-        
-        [_indicateButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            [make.right.mas_equalTo(self)setOffset:-DCMargin];
-            make.size.mas_equalTo(CGSizeMake(30, 30));
-            make.centerY.mas_equalTo(self);
-        }];
-        
-        [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.mas_equalTo(_indicateButton.mas_left);
-            make.centerY.mas_equalTo(self);
-        }];
-
-    }else if (_type == cellTypeTwo){
-        
-        [self addSubview:_setSwitch];
-        [_setSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
-            [make.right.mas_equalTo(self)setOffset:-DCMargin];
-            make.size.mas_equalTo(CGSizeMake(60, 35));
-            make.centerY.mas_equalTo(self);
-        }];
-    }else if (_type == cellTypeThree){
-        
-        [self addSubview:_birthField];
-        [self addSubview:_indicateButton];
-        [_indicateButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            [make.right.mas_equalTo(self)setOffset:-DCMargin];
-            make.size.mas_equalTo(CGSizeMake(30, 30));
-            make.centerY.mas_equalTo(self);
-        }];
-        
-        [_birthField mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.mas_equalTo(_indicateButton.mas_left);
-            make.centerY.mas_equalTo(self);
-        }];
-    }
     
+    [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        [make.right.mas_equalTo(self)setOffset:- 3 * DCMargin];;
+        make.centerY.mas_equalTo(self);
+    }];
     
-}
-#pragma mark - 点击事件
-- (void)switchAction:(UISwitch *)sender
-{
-    NSLog(@"%@", sender.isOn ? @"ON" : @"OFF");
+    [_birthField mas_makeConstraints:^(MASConstraintMaker *make) {
+        [make.right.mas_equalTo(self)setOffset:- 3 * DCMargin];
+        make.centerY.mas_equalTo(self);
+    }];
 }
 
 #pragma mark - 跟换生气结束

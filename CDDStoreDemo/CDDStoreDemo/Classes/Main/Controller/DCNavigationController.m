@@ -62,16 +62,35 @@
     
     if (self.childViewControllers.count >= 1) {
         //返回按钮自定义
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navigationbar_back"] style:UIBarButtonItemStyleDone target:self action:@selector(backClick)];
-        //影藏BottomBar
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        negativeSpacer.width = -15;
+        
+        UIButton *button = [[UIButton alloc] init];
+        [button setImage:[UIImage imageNamed:@"navigation_back_normal"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"navigation_back_hl"] forState:UIControlStateHighlighted];
+        button.frame = CGRectMake(0, 0, 33, 33);
+        
+        if (@available(ios 11.0,*)) {
+            button.contentEdgeInsets = UIEdgeInsetsMake(0, -15,0, 0);
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, -10,0, 0);
+        }
+        
+        [button addTarget:self action:@selector(backButtonTapClick) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+        
+        viewController.navigationItem.leftBarButtonItems = @[negativeSpacer, backButton];
+        
         viewController.hidesBottomBarWhenPushed = YES;
+        
+        // 就有滑动返回功能
+        self.interactivePopGestureRecognizer.delegate = nil;
     }
     //跳转
     [super pushViewController:viewController animated:animated];
 }
 
 #pragma mark - 点击
-- (void)backClick {
+- (void)backButtonTapClick {
     
     [self popViewControllerAnimated:YES];
 }

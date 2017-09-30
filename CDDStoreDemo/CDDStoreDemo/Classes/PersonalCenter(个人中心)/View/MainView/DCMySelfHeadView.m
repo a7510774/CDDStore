@@ -31,9 +31,14 @@
 #pragma mark - Intial
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    [DCSpeedy dc_setUpBezierPathCircularLayerWith:_headImageButton :CGSizeMake(self.headImageButton.dc_width * 0.5, self.headImageButton.dc_width * 0.5)];
 
+    [DCSpeedy dc_chageControlCircularWith:_headImageButton AndSetCornerRadius:self.headImageButton.dc_width * 0.5 SetBorderWidth:1.5 SetBorderColor:[UIColor whiteColor] canMasksToBounds:YES];
+
+    DCUserInfo *userInfo = UserInfoData;
+    UIImage *image = ([userInfo.userimage isEqualToString:@"icon"]) ? [UIImage imageNamed:@"icon"] : [DCSpeedy Base64StrToUIImage:userInfo.userimage];
+    self.nickNameLabel.text = userInfo.nickname;
+    [self.headImageButton setImage:image forState:UIControlStateNormal];
+    
 }
 
 #pragma mark - Setter Getter Methods

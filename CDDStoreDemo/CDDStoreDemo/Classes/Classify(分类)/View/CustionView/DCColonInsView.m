@@ -61,7 +61,7 @@
         DCUpDownButton *button = [DCUpDownButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
         [button setTitle:titles[i] forState:UIControlStateNormal];
-        
+        button.titleLabel.font = PFR12Font;
         CGFloat buttonY = i * buttonH;
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         button.tag  = i + 2;
