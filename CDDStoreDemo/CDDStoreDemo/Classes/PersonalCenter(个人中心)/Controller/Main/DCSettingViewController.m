@@ -134,7 +134,7 @@ static NSString *const DCSettingCellID = @"DCSettingCell";
 #pragma mark - 点击事件
 - (void)logOffBtnClick
 {
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF;
     [WJYAlertView showTwoButtonsWithTitle:@"温馨提示" Message:@"是否确定退出登录" ButtonType:WJYAlertViewButtonTypeWarn ButtonTitle:@"确定" Click:^{
         [weakSelf.navigationController popViewControllerAnimated:YES];
     } ButtonType:WJYAlertViewButtonTypeCancel ButtonTitle:@"取消" Click:nil];

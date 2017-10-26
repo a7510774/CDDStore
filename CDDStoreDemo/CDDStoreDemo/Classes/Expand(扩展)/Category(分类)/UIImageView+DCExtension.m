@@ -17,7 +17,7 @@
 
 - (void)dc_setHeader:(NSString *)url
 {
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF;
     [self sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         weakSelf.image = image ?[image dc_circleImage] : nil;
     }];

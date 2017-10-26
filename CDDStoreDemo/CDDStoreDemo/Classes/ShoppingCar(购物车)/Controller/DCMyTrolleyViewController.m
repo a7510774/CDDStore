@@ -29,9 +29,11 @@
 
 /* collectionView */
 @property (strong , nonatomic)UICollectionView *collectionView;
-
 /* 推荐商品数据 */
 @property (strong , nonatomic)NSMutableArray<DCRecommendItem *> *recommendItem;
+
+/* 通知 */
+@property (weak ,nonatomic) id dcObserve;
 
 @end
 
@@ -138,6 +140,13 @@ static NSString *const DCRecommendCellID = @"DCRecommendCell";
     
     NSLog(@"点击了推荐商品");
     
+}
+
+
+#pragma mark - 消失
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:_dcObserve];
 }
 
 @end

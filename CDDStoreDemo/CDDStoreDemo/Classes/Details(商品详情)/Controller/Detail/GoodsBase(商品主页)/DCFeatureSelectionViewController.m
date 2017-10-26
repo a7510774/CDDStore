@@ -189,7 +189,7 @@ static NSString *const DCFeatureChoseTopCellID = @"DCFeatureChoseTopCell";
 - (void)setUpFeatureAlterView
 {
     XWInteractiveTransitionGestureDirection direction = XWInteractiveTransitionGestureDirectionDown;
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [self xw_registerBackInteractiveTransitionWithDirection:direction transitonBlock:^(CGPoint startPoint){
         [weakSelf dismissViewControllerAnimated:YES completion:^{
             [weakSelf dismissFeatureViewControllerWithTag:100];
@@ -218,7 +218,7 @@ static NSString *const DCFeatureChoseTopCellID = @"DCFeatureChoseTopCell";
 
     cell.goodPriceLabel.text = [NSString stringWithFormat:@"¥ %@",@"12"];
     [cell.goodImageView sd_setImageWithURL:[NSURL URLWithString:_goodImageView]];
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     cell.crossButtonClickBlock = ^{
         [weakSelf dismissFeatureViewControllerWithTag:100];
     };
@@ -229,7 +229,7 @@ static NSString *const DCFeatureChoseTopCellID = @"DCFeatureChoseTopCell";
 - (void)dismissFeatureViewControllerWithTag:(NSInteger)tag
 {
 
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [weakSelf dismissViewControllerAnimated:YES completion:^{
         if (![weakSelf.cell.chooseAttLabel.text isEqualToString:@"有货"]) {//当选择全属性才传递出去
             

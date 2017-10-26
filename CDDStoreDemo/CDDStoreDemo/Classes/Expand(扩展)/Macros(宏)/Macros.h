@@ -14,6 +14,10 @@
 /** 屏幕宽度 */
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 
+/** 弱引用 */
+#define WEAKSELF __weak typeof(self) weakSelf = self;
+
+
 /******************    TabBar          *************/
 #define MallClassKey   @"rootVCClassString"
 #define MallTitleKey   @"title"

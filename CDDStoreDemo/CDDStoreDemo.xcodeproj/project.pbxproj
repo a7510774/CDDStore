@@ -23,14 +23,6 @@
 		181AEDB11F4BC9A8003DB950 /* DCHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDAA1F4BC9A8003DB950 /* DCHeaderReusableView.m */; };
 		181AEDB21F4BC9A8003DB950 /* DCHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */; };
 		181AEDE81F4BF802003DB950 /* DCSildeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181AEDE71F4BF802003DB950 /* DCSildeBarView.m */; };
-		1862FBCB1F67D7D50001B8BE /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBC41F67D7D50001B8BE /* EGOCache.m */; };
-		1862FBCC1F67D7D50001B8BE /* NetworkUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBC61F67D7D50001B8BE /* NetworkUnit.m */; };
-		1862FBCD1F67D7D50001B8BE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBC81F67D7D50001B8BE /* Reachability.m */; };
-		1862FBCE1F67D7D50001B8BE /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862FBCA1F67D7D50001B8BE /* RequestTool.m */; };
-		186CFAA71F614B9E006A9A9A /* DCPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFA9A1F614B9E006A9A9A /* DCPagerController.m */; };
-		186CFAA81F614B9E006A9A9A /* UIView+DCPagerFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFA9E1F614B9E006A9A9A /* UIView+DCPagerFrame.m */; };
-		186CFAA91F614B9E006A9A9A /* DCPagerConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAA11F614B9E006A9A9A /* DCPagerConsts.m */; };
-		186CFAAA1F614B9E006A9A9A /* DCPagerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAA61F614B9E006A9A9A /* DCPagerProgressView.m */; };
 		186CFAAE1F615660006A9A9A /* GQGesVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAAD1F615660006A9A9A /* GQGesVCTransition.m */; };
 		186CFAB11F6156AD006A9A9A /* DCParticularsShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CFAB01F6156AD006A9A9A /* DCParticularsShowViewController.m */; };
 		187E678B1E7D793100722607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E678A1E7D793100722607 /* main.m */; };
@@ -220,6 +212,10 @@
 		18DD85C71F0650F400F47095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DD85C61F0650F400F47095 /* Assets.xcassets */; };
 		18F64B1B1F0E03F500DB978C /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */; };
 		928A971B1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928A971A1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib */; };
+		92B4F8571F8DBBBE003C2E76 /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B4F8561F8DB7B4003C2E76 /* RequestTool.m */; };
+		92B4F8581F8DBBCC003C2E76 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B4F8501F8DB7B4003C2E76 /* EGOCache.m */; };
+		92B4F8591F8DBBD2003C2E76 /* NetworkUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B4F8521F8DB7B4003C2E76 /* NetworkUnit.m */; };
+		92B4F85A1F8DBBED003C2E76 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B4F8541F8DB7B4003C2E76 /* Reachability.m */; };
 		B4BD6CD985407C4066CE3D78 /* libPods-CDDStoreDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D28CF44E5CEBF6947E889711 /* libPods-CDDStoreDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -271,23 +267,6 @@
 		181AEDAB1F4BC9A8003DB950 /* DCHeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCHeaderReusableView.xib; sourceTree = "<group>"; };
 		181AEDE61F4BF802003DB950 /* DCSildeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSildeBarView.h; sourceTree = "<group>"; };
 		181AEDE71F4BF802003DB950 /* DCSildeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSildeBarView.m; sourceTree = "<group>"; };
-		1862FBC31F67D7D50001B8BE /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
-		1862FBC41F67D7D50001B8BE /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
-		1862FBC51F67D7D50001B8BE /* NetworkUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUnit.h; sourceTree = "<group>"; };
-		1862FBC61F67D7D50001B8BE /* NetworkUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUnit.m; sourceTree = "<group>"; };
-		1862FBC71F67D7D50001B8BE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		1862FBC81F67D7D50001B8BE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		1862FBC91F67D7D50001B8BE /* RequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTool.h; sourceTree = "<group>"; };
-		1862FBCA1F67D7D50001B8BE /* RequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestTool.m; sourceTree = "<group>"; };
-		186CFA991F614B9E006A9A9A /* DCPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerController.h; sourceTree = "<group>"; };
-		186CFA9A1F614B9E006A9A9A /* DCPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPagerController.m; sourceTree = "<group>"; };
-		186CFA9D1F614B9E006A9A9A /* UIView+DCPagerFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCPagerFrame.h"; sourceTree = "<group>"; };
-		186CFA9E1F614B9E006A9A9A /* UIView+DCPagerFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCPagerFrame.m"; sourceTree = "<group>"; };
-		186CFAA01F614B9E006A9A9A /* DCPagerConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerConsts.h; sourceTree = "<group>"; };
-		186CFAA11F614B9E006A9A9A /* DCPagerConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPagerConsts.m; sourceTree = "<group>"; };
-		186CFAA31F614B9E006A9A9A /* DCPagerMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerMacros.h; sourceTree = "<group>"; };
-		186CFAA51F614B9E006A9A9A /* DCPagerProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPagerProgressView.h; sourceTree = "<group>"; };
-		186CFAA61F614B9E006A9A9A /* DCPagerProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPagerProgressView.m; sourceTree = "<group>"; };
 		186CFAAC1F615660006A9A9A /* GQGesVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQGesVCTransition.h; sourceTree = "<group>"; };
 		186CFAAD1F615660006A9A9A /* GQGesVCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQGesVCTransition.m; sourceTree = "<group>"; };
 		186CFAAF1F6156AD006A9A9A /* DCParticularsShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCParticularsShowViewController.h; sourceTree = "<group>"; };
@@ -643,6 +622,14 @@
 		18DD85C81F06512100F47095 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang Medium.ttf"; sourceTree = "<group>"; };
 		928A971A1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCMySelfMessageViewController.xib; sourceTree = "<group>"; };
+		92B4F84F1F8DB7B4003C2E76 /* EGOCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		92B4F8501F8DB7B4003C2E76 /* EGOCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		92B4F8511F8DB7B4003C2E76 /* NetworkUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkUnit.h; sourceTree = "<group>"; };
+		92B4F8521F8DB7B4003C2E76 /* NetworkUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkUnit.m; sourceTree = "<group>"; };
+		92B4F8531F8DB7B4003C2E76 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		92B4F8541F8DB7B4003C2E76 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		92B4F8551F8DB7B4003C2E76 /* RequestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestTool.h; sourceTree = "<group>"; };
+		92B4F8561F8DB7B4003C2E76 /* RequestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestTool.m; sourceTree = "<group>"; };
 		B6042526F9488CF29434ADDB /* Pods-CDDStoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDStoreDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDDStoreDemo/Pods-CDDStoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D28CF44E5CEBF6947E889711 /* libPods-CDDStoreDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDDStoreDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3736E949C41228120EF9FC0 /* Pods-CDDStoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDStoreDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDDStoreDemo/Pods-CDDStoreDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -771,85 +758,6 @@
 				181AEDE71F4BF802003DB950 /* DCSildeBarView.m */,
 			);
 			path = CustomView;
-			sourceTree = "<group>";
-		};
-		1862FBC21F67D7D50001B8BE /* RequestTool */ = {
-			isa = PBXGroup;
-			children = (
-				1862FBC31F67D7D50001B8BE /* EGOCache.h */,
-				1862FBC41F67D7D50001B8BE /* EGOCache.m */,
-				1862FBC51F67D7D50001B8BE /* NetworkUnit.h */,
-				1862FBC61F67D7D50001B8BE /* NetworkUnit.m */,
-				1862FBC71F67D7D50001B8BE /* Reachability.h */,
-				1862FBC81F67D7D50001B8BE /* Reachability.m */,
-				1862FBC91F67D7D50001B8BE /* RequestTool.h */,
-				1862FBCA1F67D7D50001B8BE /* RequestTool.m */,
-			);
-			path = RequestTool;
-			sourceTree = "<group>";
-		};
-		186CFA971F614B9E006A9A9A /* CDDPagerController */ = {
-			isa = PBXGroup;
-			children = (
-				186CFA981F614B9E006A9A9A /* Controller */,
-				186CFA9B1F614B9E006A9A9A /* Expand(扩展) */,
-				186CFAA41F614B9E006A9A9A /* View */,
-			);
-			path = CDDPagerController;
-			sourceTree = "<group>";
-		};
-		186CFA981F614B9E006A9A9A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				186CFA991F614B9E006A9A9A /* DCPagerController.h */,
-				186CFA9A1F614B9E006A9A9A /* DCPagerController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		186CFA9B1F614B9E006A9A9A /* Expand(扩展) */ = {
-			isa = PBXGroup;
-			children = (
-				186CFA9C1F614B9E006A9A9A /* Category(分类) */,
-				186CFA9F1F614B9E006A9A9A /* Const(常量) */,
-				186CFAA21F614B9E006A9A9A /* Macros(宏) */,
-			);
-			path = "Expand(扩展)";
-			sourceTree = "<group>";
-		};
-		186CFA9C1F614B9E006A9A9A /* Category(分类) */ = {
-			isa = PBXGroup;
-			children = (
-				186CFA9D1F614B9E006A9A9A /* UIView+DCPagerFrame.h */,
-				186CFA9E1F614B9E006A9A9A /* UIView+DCPagerFrame.m */,
-			);
-			path = "Category(分类)";
-			sourceTree = "<group>";
-		};
-		186CFA9F1F614B9E006A9A9A /* Const(常量) */ = {
-			isa = PBXGroup;
-			children = (
-				186CFAA01F614B9E006A9A9A /* DCPagerConsts.h */,
-				186CFAA11F614B9E006A9A9A /* DCPagerConsts.m */,
-			);
-			path = "Const(常量)";
-			sourceTree = "<group>";
-		};
-		186CFAA21F614B9E006A9A9A /* Macros(宏) */ = {
-			isa = PBXGroup;
-			children = (
-				186CFAA31F614B9E006A9A9A /* DCPagerMacros.h */,
-			);
-			path = "Macros(宏)";
-			sourceTree = "<group>";
-		};
-		186CFAA41F614B9E006A9A9A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				186CFAA51F614B9E006A9A9A /* DCPagerProgressView.h */,
-				186CFAA61F614B9E006A9A9A /* DCPagerProgressView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		186CFAAB1F615660006A9A9A /* GQGesVCTransition */ = {
@@ -1386,9 +1294,7 @@
 		18DCA1F91F1F4186008BF67E /* Vendors(第三方) */ = {
 			isa = PBXGroup;
 			children = (
-				1862FBC21F67D7D50001B8BE /* RequestTool */,
 				186CFAAB1F615660006A9A9A /* GQGesVCTransition */,
-				186CFA971F614B9E006A9A9A /* CDDPagerController */,
 				18DCA1FA1F1F4186008BF67E /* AddressManager */,
 				18DCA1FE1F1F4186008BF67E /* AlertViewManager */,
 				18DCA2041F1F4186008BF67E /* DBModel */,
@@ -1891,6 +1797,7 @@
 		18DCA2E11F1F4187008BF67E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				92B4F84E1F8DB7B4003C2E76 /* RequestTool */,
 				18DCA2E21F1F4187008BF67E /* Plist */,
 			);
 			path = Resource;
@@ -2003,6 +1910,21 @@
 				F3736E949C41228120EF9FC0 /* Pods-CDDStoreDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		92B4F84E1F8DB7B4003C2E76 /* RequestTool */ = {
+			isa = PBXGroup;
+			children = (
+				92B4F84F1F8DB7B4003C2E76 /* EGOCache.h */,
+				92B4F8501F8DB7B4003C2E76 /* EGOCache.m */,
+				92B4F8511F8DB7B4003C2E76 /* NetworkUnit.h */,
+				92B4F8521F8DB7B4003C2E76 /* NetworkUnit.m */,
+				92B4F8531F8DB7B4003C2E76 /* Reachability.h */,
+				92B4F8541F8DB7B4003C2E76 /* Reachability.m */,
+				92B4F8551F8DB7B4003C2E76 /* RequestTool.h */,
+				92B4F8561F8DB7B4003C2E76 /* RequestTool.m */,
+			);
+			path = RequestTool;
 			sourceTree = "<group>";
 		};
 		FCDD3FF9C2C0B568BD8C276D /* Frameworks */ = {
@@ -2239,13 +2161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B4F85A1F8DBBED003C2E76 /* Reachability.m in Sources */,
+				92B4F8591F8DBBD2003C2E76 /* NetworkUnit.m in Sources */,
+				92B4F8581F8DBBCC003C2E76 /* EGOCache.m in Sources */,
+				92B4F8571F8DBBBE003C2E76 /* RequestTool.m in Sources */,
 				18DCA3911F1F4187008BF67E /* DCGoodsSurplusCell.m in Sources */,
 				18DCA3C91F1F4187008BF67E /* DCRecommendCell.m in Sources */,
 				18DCA3621F1F4187008BF67E /* ZXingWrapper.m in Sources */,
 				18DCA30C1F1F4187008BF67E /* DCFootprintGoodsViewController.m in Sources */,
 				18DCA3C71F1F4187008BF67E /* DCRecommendItem.m in Sources */,
 				181AED811F4BC646003DB950 /* DCFeatureSelectionViewController.m in Sources */,
-				186CFAAA1F614B9E006A9A9A /* DCPagerProgressView.m in Sources */,
 				18DCA33E1F1F4187008BF67E /* DCPartCommentHeadView.m in Sources */,
 				18DCA3091F1F4187008BF67E /* AppDelegate.m in Sources */,
 				18DCA3851F1F4187008BF67E /* XWFilterAnimator+XWPageCurl.m in Sources */,
@@ -2273,10 +2198,8 @@
 				18DCA3431F1F4187008BF67E /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				18DCA3301F1F4187008BF67E /* DCDetailLikeItemCell.m in Sources */,
 				18DCA39C1F1F4187008BF67E /* DCZuoWenRightButton.m in Sources */,
-				1862FBCD1F67D7D50001B8BE /* Reachability.m in Sources */,
 				18DCA3531F1F4187008BF67E /* JKDBHelper.m in Sources */,
 				18DCA39B1F1F4187008BF67E /* DCNumericalScrollView.m in Sources */,
-				1862FBCE1F67D7D50001B8BE /* RequestTool.m in Sources */,
 				18DCA3811F1F4187008BF67E /* XWFilterAnimator+XWCopyMachine.m in Sources */,
 				18DCA3A81F1F4187008BF67E /* DCFlowItem.m in Sources */,
 				18DCA3651F1F4187008BF67E /* ScanResultViewController.m in Sources */,
@@ -2300,7 +2223,6 @@
 				18DCA3761F1F4187008BF67E /* XWCoolAnimator+XWExplode.m in Sources */,
 				18DCA3901F1F4187008BF67E /* DCGoodsHandheldCell.m in Sources */,
 				18DCA3451F1F4187008BF67E /* UIImageView+DCExtension.m in Sources */,
-				186CFAA81F614B9E006A9A9A /* UIView+DCPagerFrame.m in Sources */,
 				18DCA34A1F1F4187008BF67E /* DCUpDownButton.m in Sources */,
 				18DCA31B1F1F4187008BF67E /* DCHoverFlowLayout.m in Sources */,
 				18DCA35F1F1F4187008BF67E /* LBXScanViewStyle.m in Sources */,
@@ -2331,7 +2253,6 @@
 				18DCA33D1F1F4187008BF67E /* DCDetailPartCommentCell.m in Sources */,
 				18DCA3CA1F1F4187008BF67E /* DCRecommendReusableView.m in Sources */,
 				18DCA35D1F1F4187008BF67E /* LBXScanView.m in Sources */,
-				186CFAA71F614B9E006A9A9A /* DCPagerController.m in Sources */,
 				18DCA3541F1F4187008BF67E /* JKDBModel.m in Sources */,
 				18DCA36A1F1F4187008BF67E /* UINavigationController+XWTransition.m in Sources */,
 				18DCA3951F1F4187008BF67E /* DCTopLineFootView.m in Sources */,
@@ -2387,13 +2308,10 @@
 				18DCA3A21F1F4187008BF67E /* DCMySelfMessageViewController.m in Sources */,
 				18DCA31D1F1F4187008BF67E /* DCFootprintCell.m in Sources */,
 				18DCA3561F1F4187008BF67E /* PPNumberButton.m in Sources */,
-				186CFAA91F614B9E006A9A9A /* DCPagerConsts.m in Sources */,
 				18DCA30E1F1F4187008BF67E /* DCCalssSubItem.m in Sources */,
 				18DCA3AB1F1F4187008BF67E /* DCHelpBackSquareCell.m in Sources */,
 				18DCA32C1F1F4187008BF67E /* DCDeatilCustomHeadView.m in Sources */,
-				1862FBCB1F67D7D50001B8BE /* EGOCache.m in Sources */,
 				18DCA34B1F1F4187008BF67E /* DCKeepNewUserData.m in Sources */,
-				1862FBCC1F67D7D50001B8BE /* NetworkUnit.m in Sources */,
 				181AEDB11F4BC9A8003DB950 /* DCHeaderReusableView.m in Sources */,
 				18DCA3691F1F4187008BF67E /* UIAlertView+LBXAlertAction.m in Sources */,
 				18DCA3341F1F4187008BF67E /* DCShowTypeFourCell.m in Sources */,

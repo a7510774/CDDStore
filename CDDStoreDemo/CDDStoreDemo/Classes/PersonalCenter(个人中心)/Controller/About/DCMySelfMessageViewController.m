@@ -130,7 +130,7 @@ static NSString *const DCSettingCellID = @"DCSettingCell";
 
 #pragma mark - 点击了更换头像
 - (void)changeProfileImage:(DCUserInfo *)userInfo {
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF;
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     [alert addAction:[UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
         DCSelPhotos *imageManager = [DCSelPhotos selPhotos];
@@ -159,7 +159,7 @@ static NSString *const DCSettingCellID = @"DCSettingCell";
 #pragma mark - 改变用户性别
 - (void)changeSex:(DCUserInfo *)userInfo
 {
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF;
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     [alert addAction:[UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
         if (![userInfo.sex isEqualToString:@"女"]) {

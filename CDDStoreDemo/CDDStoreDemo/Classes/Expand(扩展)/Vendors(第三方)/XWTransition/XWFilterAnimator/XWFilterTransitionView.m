@@ -67,7 +67,7 @@
     _XWDisplayRatioLayer *layer = [_XWDisplayRatioLayer new];
     _ratioLayer = layer;
     _ratioLayer.frame = CGRectMake(0, 0, 100, 100);
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF;
     _ratioLayer.ratioUpdating = ^(CGFloat ratio){
         weakSelf.ratio = ratio;
         [weakSelf setNeedsDisplay];

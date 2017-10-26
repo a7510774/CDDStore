@@ -39,6 +39,8 @@
 @property (nonatomic, strong) UIFont *titleFont;
 /** 字体缩放比例 */
 @property (nonatomic, assign) CGFloat titleScale;
+/** 标题按钮的宽度 */
+@property (nonatomic, assign) CGFloat titleButtonWidth;
 /** 指示器的长度 */
 @property (nonatomic, assign) CGFloat progressLength;
 /** 指示器的宽度 */
@@ -139,7 +141,7 @@
 
 
 #pragma mark - setUpDisplayStyle
-- (void)setUpDisplayStyle:(void(^)(UIColor **titleScrollViewBgColor,UIColor **norColor,UIColor **selColor,UIColor **proColor,UIFont **titleFont,BOOL *isShowPregressView,BOOL *isOpenStretch,BOOL *isOpenShade))BaseSettingBlock
+- (void)setUpDisplayStyle:(void(^)(UIColor **titleScrollViewBgColor,UIColor **norColor,UIColor **selColor,UIColor **proColor,UIFont **titleFont,CGFloat *titleButtonWidth,BOOL *isShowPregressView,BOOL *isOpenStretch,BOOL *isOpenShade))BaseSettingBlock
 {
     UIColor *titleScrollViewBgColor;
     UIColor *norColor;
@@ -147,13 +149,14 @@
     UIColor *proColor;
     UIFont *titleFont;
     
+    
     BOOL isShowPregressView;
     BOOL isOpenStretch;
     BOOL isOpenShade;
 
     
     if (BaseSettingBlock) { //属性
-        BaseSettingBlock(&titleScrollViewBgColor,&norColor,&selColor,&proColor,&titleFont,&isShowPregressView,&isOpenStretch,&isOpenShade);
+        BaseSettingBlock(&titleScrollViewBgColor,&norColor,&selColor,&proColor,&titleFont,&_titleButtonWidth,&isShowPregressView,&isOpenStretch,&isOpenShade);
         
         self.titleScrollViewBgColor = titleScrollViewBgColor;
         self.norColor = norColor;
@@ -206,6 +209,21 @@
 
 }
 
+#pragma mark - 重新刷新界面
+- (void)setUpRefreshDisplay
+{
+    // 清空之前所有标题数组
+    [self.titleButtonArray makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.titleButtonArray removeAllObjects];
+    
+    [self setUpAllTitle];  //重新设置
+    
+    // 默认选中标题
+    self.selectIndex = self.selectIndex;
+}
+
+
+
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
@@ -216,16 +234,17 @@
     CGFloat tH = (_titleViewHeight != 0) ? _titleViewHeight : DCNormalTitleViewH;
     
     self.titleScrollView.frame = CGRectMake(0, tY, ScreenW, tH);
-    self.contentScrollView.frame = CGRectMake(0, self.titleScrollView.dc_bottom, ScreenW, ScreenH - self.titleScrollView.dc_bottom);
+    self.contentScrollView.frame = CGRectMake(0, tY + tH, ScreenW, ScreenH - (tY + tH));
 }
 
 #pragma mark - 设置标题
 - (void)setUpAllTitle
 {
     NSInteger VCCount = self.childViewControllers.count;
+    if (VCCount == 0) return;  //如果子控制器为0直接返回
     
     CGFloat customW = 80;
-    CGFloat buttonW = (VCCount * customW < ScreenW) ? ScreenW / VCCount: customW + 20;
+    CGFloat buttonW = (_titleButtonWidth !=0 ) ? _titleButtonWidth : (VCCount * customW < ScreenW) ? ScreenW / VCCount: customW + 20;
     
     CGFloat tH = (_titleViewHeight != 0) ? _titleViewHeight : DCNormalTitleViewH;
     CGFloat buttonH = tH;
@@ -263,9 +282,10 @@
         }
     }
     
-    if (_isShowPregressView) {
+    if (_isShowPregressView) { //如果没子控制器的时候不加载
         //指示条
-        _pregressView = [[DCPagerProgressView alloc] initWithFrame:CGRectMake(0, buttonH - (progressH + 1), VCCount * buttonW, progressH)];
+        _pregressView = [DCPagerProgressView new];
+        _pregressView.frame = CGRectMake(0, buttonH - (progressH + 1), VCCount * buttonW, progressH);
         _pregressView.itemFrames = self.pregressFrames;
         _pregressView.color = self.proColor.CGColor;
         _pregressView.backgroundColor = [UIColor clearColor];

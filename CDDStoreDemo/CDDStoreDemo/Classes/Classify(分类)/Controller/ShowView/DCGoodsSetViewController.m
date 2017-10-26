@@ -171,7 +171,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
     cell = (_isSwitchGrid) ? [collectionView dequeueReusableCellWithReuseIdentifier:DCListGridCellID forIndexPath:indexPath] : [collectionView dequeueReusableCellWithReuseIdentifier:DCSwitchGridCellID forIndexPath:indexPath];
     cell.youSelectItem = _setItem[indexPath.row];
     
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     if (_isSwitchGrid) { //列表Cell
         __weak typeof(cell)weakCell = cell;
         cell.colonClickBlock = ^{ // 冒号点击
@@ -202,7 +202,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
     if (kind == UICollectionElementKindSectionHeader){
         
         DCCustionHeadView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:DCCustionHeadViewID forIndexPath:indexPath];
-        __weak typeof(self)weakSelf = self;
+        WEAKSELF
         headerView.filtrateClickBlock = ^{//点击了筛选
             [weakSelf filtrateButtonClick];
         };
@@ -246,7 +246,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
     
     [self.navigationController pushViewController:dcVc animated:YES];
     
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [UIView animateWithDuration:0.3 animations:^{
         weakSelf.colonView.dc_x = ScreenW;
     }completion:^(BOOL finished) {
@@ -282,7 +282,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
     //判断回到顶部按钮是否隐藏
     _backTopButton.hidden = (scrollView.contentOffset.y > ScreenH) ? NO : YES;
 
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [UIView animateWithDuration:0.25 animations:^{
         __strong typeof(weakSelf)strongSelf = weakSelf;
         strongSelf.footprintButton.dc_y = (strongSelf.backTopButton.hidden == YES) ? ScreenH - 60 : ScreenH - 110;
@@ -343,7 +343,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
     XWDrawerAnimator *animator = [XWDrawerAnimator xw_animatorWithDirection:direction moveDistance:distance];
     animator.parallaxEnable = YES;
     [self xw_presentViewController:vc withAnimator:animator];
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
         [weakSelf selfAlterViewback];
     }];

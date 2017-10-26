@@ -105,7 +105,7 @@ static NSString *DCFootprintCellID = @"DCFootprintCell";
 - (void)setUpFootprintAlterView
 {
     XWInteractiveTransitionGestureDirection direction = XWInteractiveTransitionGestureDirectionLeft;
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [self xw_registerBackInteractiveTransitionWithDirection:direction transitonBlock:^(CGPoint startPoint){
         [weakSelf selfViewBack];
     } edgeSpacing:80];

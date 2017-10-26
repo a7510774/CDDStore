@@ -47,13 +47,18 @@
  *selColor               标题字体选中状态下颜色
  *proColor               字体下方指示器颜色
  *titleFont              标题字体大小
+ *titleButtonWidth       标题按钮的宽度
  *isShowPregressView     是否开启字体下方指示器
  *isOpenStretch          是否开启指示器拉伸效果
  *isOpenShade            是否开启字体渐变效果
 
  @param BaseSettingBlock 设置基本属性
  */
-- (void)setUpDisplayStyle:(void(^)(UIColor **titleScrollViewBgColor,UIColor **norColor,UIColor **selColor,UIColor **proColor,UIFont **titleFont,BOOL *isShowPregressView,BOOL *isOpenStretch,BOOL *isOpenShade))BaseSettingBlock;
+- (void)setUpDisplayStyle:(void(^)(UIColor **titleScrollViewBgColor,UIColor **norColor,UIColor **selColor,UIColor **proColor,UIFont **titleFont,CGFloat *titleButtonWidth,BOOL *isShowPregressView,BOOL *isOpenStretch,BOOL *isOpenShade))BaseSettingBlock;
 
+/**
+ 刷新标题和整个界面，在调用之前，需要获取到所有的子控制器。
+ */
+- (void)setUpRefreshDisplay;
 
 @end

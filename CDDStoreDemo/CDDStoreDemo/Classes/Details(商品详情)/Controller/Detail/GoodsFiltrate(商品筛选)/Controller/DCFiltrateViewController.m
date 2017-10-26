@@ -156,7 +156,7 @@ static NSString * const DCFooterReusableViewID = @"DCFooterReusableView";
     if ([kind  isEqualToString:UICollectionElementKindSectionHeader]) {
         
         DCHeaderReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:DCHeaderReusableViewID forIndexPath:indexPath];
-        __weak typeof(self)weakSelf = self;
+        WEAKSELF
         headerView.sectionClick = ^{
             
             weakSelf.filtrateItem[indexPath.section].isOpen = !weakSelf.filtrateItem[indexPath.section].isOpen; //打开取反

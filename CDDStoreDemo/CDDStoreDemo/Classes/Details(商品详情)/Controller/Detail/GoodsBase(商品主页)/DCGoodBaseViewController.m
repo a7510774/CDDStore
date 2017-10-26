@@ -177,7 +177,7 @@ static NSArray *lastSeleArray_;
 - (void)acceptanceNote
 {
     //分享通知
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     _dcObj = [[NSNotificationCenter defaultCenter]addObserverForName:@"shareAlterView" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         [weakSelf selfAlterViewback];
         [weakSelf setUpAlterViewControllerWith:[DCShareToViewController new] WithDistance:300 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:NO WithFlipEnable:NO];
@@ -201,7 +201,7 @@ static NSArray *lastSeleArray_;
         }else {
             
             DCFeatureSelectionViewController *dcNewFeaVc = [DCFeatureSelectionViewController new];
-            dcNewFeaVc.goodImageView = _goodImageView;
+            dcNewFeaVc.goodImageView = weakSelf.goodImageView;
             [weakSelf setUpAlterViewControllerWith:dcNewFeaVc WithDistance:ScreenH * 0.8 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:YES WithFlipEnable:YES];
         }
     }];
@@ -283,7 +283,7 @@ static NSArray *lastSeleArray_;
             cell.goodPriceLabel.text = [NSString stringWithFormat:@"¥ %@",_goodPrice];
             cell.goodSubtitleLabel.text = _goodSubtitle;
             [DCSpeedy dc_setUpLabel:cell.goodTitleLabel Content:_goodTitle IndentationFortheFirstLineWith:cell.goodPriceLabel.font.pointSize * 2];
-            __weak typeof(self)weakSelf = self;
+            WEAKSELF
             cell.shareButtonClickBlock = ^{
                 [weakSelf setUpAlterViewControllerWith:[DCShareToViewController new] WithDistance:300 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:NO WithFlipEnable:NO];
             };
@@ -412,7 +412,7 @@ static NSArray *lastSeleArray_;
 
 #pragma mark - 视图滚动
 - (void)setUpViewScroller{
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     self.collectionView.mj_footer = [MJRefreshBackFooter footerWithRefreshingBlock:^{
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
             !weakSelf.changeTitleBlock ? : weakSelf.changeTitleBlock(YES);
@@ -448,7 +448,7 @@ static NSArray *lastSeleArray_;
     [_adPickerView showAddressPickView];
     [self.view addSubview:_adPickerView];
     
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     _adPickerView.block = ^(NSString *province,NSString *city,NSString *district) {
         DCUserInfo *userInfo = UserInfoData;
         NSString *newAdress = [NSString stringWithFormat:@"%@ %@ %@",province,city,district];
@@ -475,7 +475,7 @@ static NSArray *lastSeleArray_;
     if (self.scrollerView.contentOffset.y > ScreenH) {
         [self.collectionView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
     }else{
-        __weak typeof(self)weakSelf = self;
+        WEAKSELF
         [UIView animateWithDuration:0.5 animations:^{
             weakSelf.scrollerView.contentOffset = CGPointMake(0, 0);
         } completion:^(BOOL finished) {
@@ -494,7 +494,7 @@ static NSArray *lastSeleArray_;
     animator.parallaxEnable = parallaxEnable;
     animator.flipEnable = flipEnable;
     [self xw_presentViewController:vc withAnimator:animator];
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
         [weakSelf selfAlterViewback];
     }];

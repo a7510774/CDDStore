@@ -187,7 +187,7 @@ static NSString *const DCYouLikeHeadViewID = @"DCYouLikeHeadView";
     if (kind == UICollectionElementKindSectionHeader) {
         if (indexPath.section == 0) {
             DCMySelfHeadView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:DCMySelfHeadViewID forIndexPath:indexPath];
-            __weak typeof(self)weakSelf = self;
+            WEAKSELF;
 
             
             headerView.goodsCollectionClickBlock = ^{
@@ -314,7 +314,7 @@ static NSString *const DCYouLikeHeadViewID = @"DCYouLikeHeadView";
     
     [self.view insertSubview:_hoverNavView aboveSubview:self.collectionView];
     _hoverNavView.frame = CGRectMake(0, 0, ScreenW, 64);
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF;
     _hoverNavView.leftItemClickBlock = ^{
         [weakSelf settingItemClick];
     };

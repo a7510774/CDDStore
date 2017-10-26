@@ -164,7 +164,7 @@
 #pragma mark - 添加子控制器
 -(void)setUpChildViewControllers
 {
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     DCGoodBaseViewController *goodBaseVc = [[DCGoodBaseViewController alloc] init];
     goodBaseVc.goodTitle = _goodTitle;
     goodBaseVc.goodPrice = _goodPrice;
@@ -275,7 +275,7 @@
     
     _selectBtn = button;
     
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [UIView animateWithDuration:0.25 animations:^{
         weakSelf.indicatorView.dc_width = button.titleLabel.dc_width;
         weakSelf.indicatorView.dc_centerX = button.dc_centerX;
@@ -323,7 +323,7 @@
     animator.parallaxEnable = parallaxEnable;
     animator.flipEnable = flipEnable;
     [self xw_presentViewController:vc withAnimator:animator];
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [animator xw_enableEdgeGestureAndBackTapWithConfig:^{
         [weakSelf selfAlterViewback];
     }];

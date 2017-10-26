@@ -69,7 +69,7 @@
     [self addSubview:self.coverView];
     [self addSubview:self.filterView.view];
     
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [UIView animateWithDuration:AnimatorDuration animations:^{
         weakSelf.coverView.alpha = 0.4;
         weakSelf.filterView.view.dc_x = ScreenW * 0.2;
@@ -136,7 +136,7 @@
 #pragma mark - 点击手势事件
 - (void)tapEvent{
     
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [UIView animateWithDuration:AnimatorDuration animations:^{
         weakSelf.coverView.alpha = 0.0;
         weakSelf.filterView.view.dc_x = ScreenW;

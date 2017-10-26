@@ -123,7 +123,7 @@ static NSString *const DCShareItemCellID = @"DCShareItemCell";
 - (void)setUpShareAlterView
 {
     XWInteractiveTransitionGestureDirection direction = XWInteractiveTransitionGestureDirectionDown;
-    __weak typeof(self)weakSelf = self;
+    WEAKSELF
     [self xw_registerBackInteractiveTransitionWithDirection:direction transitonBlock:^(CGPoint startPoint){
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     } edgeSpacing:0];
