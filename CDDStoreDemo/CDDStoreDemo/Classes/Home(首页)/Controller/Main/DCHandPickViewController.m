@@ -18,20 +18,44 @@
 // Views
 #import "DCNavSearchBarView.h"
 
-/* cell */
-#import "DCGoodsCountDownCell.h" //倒计时商品
-#import "DCGoodsHandheldCell.h"  //掌上专享
-#import "DCExceedApplianceCell.h"//不止
-#import "DCGoodsYouLikeCell.h"   //猜你喜欢商品
-#import "DCGoodsGridCell.h"      //10个选项
+/* Section0 */
 /* head */
 #import "DCSlideshowHeadView.h"  //轮播图
-#import "DCCountDownHeadView.h"  //倒计时标语
-#import "DCYouLikeHeadView.h"    //猜你喜欢等头部标语
+/* cell */
+#import "DCGoodsGridCell.h"      //10个选项做一个cell
 /* foot */
-#import "DCTopLineFootView.h"    //热点
-#import "DCOverFootView.h"       //结束
+#import "DCTopLineFootView.h"    //热点 CDDMall首单新人礼~
+
+/* Section1 */
+/* head */
+#import "DCCountDownHeadView.h"  //倒计时标语：6点场、好货秒抢
+/* cell */
+#import "DCGoodsCountDownCell.h" //倒计时商品：可滑动
+/* foot */
+
+/* Section2 */
+/* cell */
+#import "DCExceedApplianceCell.h"//生活家电+里面的cell
+/* foot */
 #import "DCScrollAdFootView.h"   //底滚动广告
+
+/* Section3 */
+/* head */
+#import "DCYouLikeHeadView.h"    //品牌精选（图标+文字）
+/* cell */
+#import "DCGoodsHandheldCell.h"
+#import "DCGoodsHandheldCell.h"  //掌上专享
+/* foot */
+
+
+/* Section4 */
+/* head */
+//同3
+/* cell */
+#import "DCGoodsYouLikeCell.h"   //热门推荐Item
+/* foot */
+#import "DCOverFootView.h"       //结束 看完喽，下次在逛吧
+
 // Vendors
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
@@ -283,6 +307,7 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
         return CGSizeMake(ScreenW,ScreenW * 0.35 + 120);
     }
     if (indexPath.section == 3) {//推荐组
+        //每个都云指定其大小
         return [self layoutAttributesForItemAtIndexPath:indexPath].size;
     }
     if (indexPath.section == 4) {//猜你喜欢
