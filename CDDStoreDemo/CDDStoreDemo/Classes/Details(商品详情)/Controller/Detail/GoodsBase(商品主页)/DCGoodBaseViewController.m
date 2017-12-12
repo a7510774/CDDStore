@@ -21,16 +21,19 @@
 
 #import "DCDetailShufflingHeadView.h" //头部轮播
 #import "DCDetailGoodReferralCell.h"  //商品标题价格介绍
+
+#import "DCShowTypeFourCell.h"        //领券
 #import "DCDetailShowTypeCell.h"      //种类
-#import "DCShowTypeOneCell.h"
-#import "DCShowTypeTwoCell.h"
-#import "DCShowTypeThreeCell.h"
-#import "DCShowTypeFourCell.h"
-#import "DCDetailServicetCell.h"      //服务
-#import "DCDetailLikeCell.h"          //猜你喜欢
-#import "DCDetailOverFooterView.h"    //尾部结束
+#import "DCShowTypeOneCell.h"         //选择商品属性
+#import "DCShowTypeTwoCell.h"         //送至
+#import "DCShowTypeThreeCell.h"       //运费
+#import "DCDetailServicetCell.h"      //以旧换新、可选增值服务
+
 #import "DCDetailPartCommentCell.h"   //部分评论
-#import "DCDeatilCustomHeadView.h"    //自定义头部
+#import "DCDeatilCustomHeadView.h"    //猜你喜欢头部
+#import "DCDetailLikeCell.h"          //猜你喜欢
+#import "DCDetailOverFooterView.h"    //上拉查看图文详情
+
 // Vendors
 #import "AddressPickerView.h"
 #import <WebKit/WebKit.h>
