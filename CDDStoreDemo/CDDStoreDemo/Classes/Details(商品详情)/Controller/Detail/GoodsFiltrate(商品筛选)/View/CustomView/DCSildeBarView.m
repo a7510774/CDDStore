@@ -39,7 +39,7 @@
     return _filterView;
 }
 
-#pragma mark - Show
+#pragma mark - Show 类方法
 + (void)dc_showSildBarViewController{
     DCSildeBarView *obj = [[DCSildeBarView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, ScreenH)];
     [KEYWINDOW addSubview:obj];
